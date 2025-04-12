@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - StoryForge Pro</title>
+    <meta name="description" content="Choose the perfect pricing plan for your writing journey with StoryForge Pro.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3047',
+                        secondary: '#1B1E2E',
+                        accent: '#E07A5F', 
+                        accentLight: '#F2D0C2',
+                        accentDark: '#C05F46',
+                        light: '#F7F3E9',
+                        dark: '#1B1C25',
+                        paper: '#F5F0E1'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-paper font-sans">
+    <div class="relative overflow-hidden">
+        <!-- Navigation -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6">
+            <header class="flex justify-between items-center mb-12">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-extrabold text-primary">StoryForge<span class="text-accent">Pro</span></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-10">
+                    <a href="features.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">Features</a>
+                    <a href="pricing.html" class="text-sm font-medium text-primary hover:text-accent hover-underline">Pricing</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">About</a>
+                    <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm font-medium text-primary hover:text-accent hover-underline">Log in</a>
+                    <a href="pricing.html" class="btn btn-primary text-sm">Try Free</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-primary p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white rounded-lg shadow-lg p-6 absolute top-20 right-4 left-4 z-50">
+                <nav class="flex flex-col space-y-4">
+                    <a href="features.html" class="text-base font-medium text-gray-600 hover:text-primary hover:underline">Features</a>
+                    <a href="pricing.html" class="text-base font-medium text-primary hover:underline">Pricing</a>
+                    <a href="about.html" class="text-base font-medium text-gray-600 hover:text-primary hover:underline">About</a>
+                    <a href="contact.html" class="text-base font-medium text-gray-600 hover:text-primary hover:underline">Contact</a>
+                    <div class="pt-4 border-t border-gray-200">
+                        <a href="#" class="block text-base font-medium text-gray-600 hover:text-primary hover:underline mb-3">Log in</a>
+                        <a href="pricing.html" class="btn btn-primary text-base w-full text-center">Try Free</a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Page Header -->
+            <div class="bg-paper py-20 md:py-24 border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-6 shadow-sm">PRICING</span>
+                        <h1 class="text-4xl md:text-5xl font-black text-primary mb-6">Simple, Transparent Pricing</h1>
+                        <p class="text-xl text-gray-600 mx-auto">Choose the plan that works best for your writing journey, with no hidden fees or surprises.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Toggle -->
+    <section class="bg-white pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="flex justify-center mb-12">
+                <div class="bg-gray-100 p-1 rounded-full inline-flex items-center">
+                    <button id="monthlyBtn" class="relative px-6 py-2 text-sm font-medium rounded-full bg-white shadow-sm text-primary">
+                        Monthly
+                    </button>
+                    <button id="annualBtn" class="relative px-6 py-2 text-sm font-medium rounded-full text-gray-500 hover:text-primary">
+                        Annual <span class="text-accentDark text-xs font-bold ml-1">Save 20%</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all hover:shadow-lg">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-primary mb-4">Free</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-extrabold text-primary">$0</span>
+                            <span class="text-gray-500 ml-2">/forever</span>
+                        </div>
+                        <p class="text-gray-600 mb-8">Perfect for beginners and casual writers experimenting with new ideas.</p>
+                        <a href="#" class="block text-center py-3 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors">Get Started</a>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-8">
+                        <h4 class="text-sm font-semibold text-primary uppercase mb-4">What's included:</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Basic manuscript editor</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Simple character profiles</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">1 active project</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Community support</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Standard Plan -->
+                <div class="bg-white rounded-2xl border border-accent overflow-hidden shadow-xl relative transition-all hover:shadow-2xl">
+                    <!-- Most Popular Badge -->
+                    <div class="absolute top-0 right-0">
+                        <div class="bg-accent text-white text-xs font-bold px-4 py-1 rounded-bl-lg">MOST POPULAR</div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-primary mb-4">Standard</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span id="standardPrice" class="text-4xl font-extrabold text-primary">$12</span>
+                            <span id="standardPeriod" class="text-gray-500 ml-2">/month</span>
+                        </div>
+                        <p class="text-gray-600 mb-8">Ideal for dedicated writers working on ongoing projects with regular updates.</p>
+                        <a href="#" class="block text-center py-3 bg-accent text-white font-medium rounded-lg hover:bg-accentDark transition-colors">Start Free Trial</a>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-8">
+                        <h4 class="text-sm font-semibold text-primary uppercase mb-4">Everything in Free, plus:</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Full visual timeline</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Advanced character development</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Basic world building tools</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">5 active projects</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Cloud sync across devices</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Priority email support</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all hover:shadow-lg">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-primary mb-4">Professional</h3>
+                        <div class="flex items-baseline mb-8">
+                            <span id="proPrice" class="text-4xl font-extrabold text-primary">$24</span>
+                            <span id="proPeriod" class="text-gray-500 ml-2">/month</span>
+                        </div>
+                        <p class="text-gray-600 mb-8">For professional authors and screenwriters managing multiple complex projects.</p>
+                        <a href="#" class="block text-center py-3 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors">Start Free Trial</a>
+                    </div>
+                    <div class="bg-gray-50 px-8 py-8">
+                        <h4 class="text-sm font-semibold text-primary uppercase mb-4">Everything in Standard, plus:</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Advanced world building suite</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Unlimited projects</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Series & franchise management</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Collaboration tools</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Publishing export formats</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-accentLight flex items-center justify-center mt-0.5">
+                                    <i class="fas fa-check text-xs text-accentDark"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-600">Dedicated support</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-paper py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide mb-4 shadow-sm">QUESTIONS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Have more questions? Don't hesitate to <a href="#" class="text-accent hover:text-accentDark">reach out to our team</a>.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">Can I try StoryForge Pro before subscribing?</h3>
+                        <p class="text-gray-600">Yes! We offer a 14-day free trial on our Standard and Professional plans with no credit card required. You can also start with our Free plan to get a feel for the basic features before upgrading.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">Can I switch between plans?</h3>
+                        <p class="text-gray-600">Absolutely. You can upgrade, downgrade, or cancel your subscription at any time. If you upgrade, the new features will be available immediately. If you downgrade, your current features will remain until the end of your billing cycle.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">Is there a discount for students or educational institutions?</h3>
+                        <p class="text-gray-600">Yes, we offer special pricing for students, teachers, and educational institutions. Please contact our support team with valid ID or institutional credentials to apply for academic pricing.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">What happens to my work if I cancel my subscription?</h3>
+                        <p class="text-gray-600">Your work remains yours. If you cancel a paid subscription, you'll be downgraded to the Free plan and will still have access to your projects, but with limited features. We recommend exporting your work before downgrading if you use advanced features extensively.</p>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">Is there a limit to how many words I can write?</h3>
+                        <p class="text-gray-600">No, there are no word count limits on any of our plans. The limits mentioned in the pricing tiers refer to the number of active projects you can work on simultaneously, not the length of your writing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="relative bg-gradient-to-br from-primary/5 to-white rounded-3xl overflow-hidden shadow-xl p-12 md:p-16">
+                <!-- Accent top border -->
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-accentLight to-accent"></div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <span class="inline-block bg-accent text-white text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-6 shadow-sm">START YOUR JOURNEY</span>
+                        <h2 class="text-4xl md:text-5xl font-black text-primary mb-6">Ready to Transform Your Writing?</h2>
+                        <p class="text-xl text-gray-600 mx-auto max-w-2xl">
+                            Join thousands of writers who've found their perfect writing companion in StoryForge Pro.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="#" class="btn btn-primary py-4 px-8 text-lg font-bold">
+                            Start Free Trial
+                        </a>
+                        <a href="#" class="text-primary font-medium hover:text-accent transition-all flex items-center gap-2">
+                            Contact Sales
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-paper pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
+                <div>
+                    <span class="text-2xl font-bold text-primary">StoryForge<span class="text-accent">Pro</span></span>
+                    <p class="mt-6 text-gray-600">The ultimate storytelling platform for novelists, screenwriters, and creative minds.</p>
+                    <div class="flex space-x-5 mt-8">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-6">Product</h3>
+                    <ul class="space-y-4">
+                        <li><a href="features.html" class="text-gray-600 hover:text-accent transition-colors font-medium">Features</a></li>
+                        <li><a href="pricing.html" class="text-gray-600 hover:text-accent transition-colors font-medium">Pricing</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Templates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-6">Company</h3>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-accent transition-colors font-medium">About</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Blog</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-6">Resources</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Writer's Guide</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Documentation</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 text-gray-600">
+                <div class="flex flex-col md:flex-row md:justify-between">
+                    <p>&copy; 2025 StoryForge Pro. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-accent transition-colors">Terms</a>
+                        <a href="#" class="hover:text-accent transition-colors">Privacy</a>
+                        <a href="#" class="hover:text-accent transition-colors">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple pricing toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const monthlyBtn = document.getElementById('monthlyBtn');
+            const annualBtn = document.getElementById('annualBtn');
+            const standardPrice = document.getElementById('standardPrice');
+            const standardPeriod = document.getElementById('standardPeriod');
+            const proPrice = document.getElementById('proPrice');
+            const proPeriod = document.getElementById('proPeriod');
+
+            monthlyBtn.addEventListener('click', function() {
+                monthlyBtn.classList.add('bg-white', 'shadow-sm', 'text-primary');
+                monthlyBtn.classList.remove('text-gray-500');
+                annualBtn.classList.remove('bg-white', 'shadow-sm', 'text-primary');
+                annualBtn.classList.add('text-gray-500');
+                
+                standardPrice.textContent = '$12';
+                standardPeriod.textContent = '/month';
+                proPrice.textContent = '$24';
+                proPeriod.textContent = '/month';
+            });
+
+            annualBtn.addEventListener('click', function() {
+                annualBtn.classList.add('bg-white', 'shadow-sm', 'text-primary');
+                annualBtn.classList.remove('text-gray-500');
+                monthlyBtn.classList.remove('bg-white', 'shadow-sm', 'text-primary');
+                monthlyBtn.classList.add('text-gray-500');
+                
+                standardPrice.textContent = '$9.60';
+                standardPeriod.textContent = '/month';
+                proPrice.textContent = '$19.20';
+                proPeriod.textContent = '/month';
+            });
+        });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const monthlyBtn = document.getElementById('monthlyBtn');
+            const annualBtn = document.getElementById('annualBtn');
+            const standardPrice = document.getElementById('standardPrice');
+            const standardPeriod = document.getElementById('standardPeriod');
+            const proPrice = document.getElementById('proPrice');
+            const proPeriod = document.getElementById('proPeriod');
+
+            monthlyBtn.addEventListener('click', function() {
+                monthlyBtn.classList.add('bg-white', 'shadow-sm', 'text-primary');
+                monthlyBtn.classList.remove('text-gray-500');
+                annualBtn.classList.remove('bg-white', 'shadow-sm', 'text-primary');
+                annualBtn.classList.add('text-gray-500');
+                
+                standardPrice.textContent = '$12';
+                standardPeriod.textContent = '/month';
+                proPrice.textContent = '$24';
+                proPeriod.textContent = '/month';
+            });
+
+            annualBtn.addEventListener('click', function() {
+                annualBtn.classList.add('bg-white', 'shadow-sm', 'text-primary');
+                annualBtn.classList.remove('text-gray-500');
+                monthlyBtn.classList.remove('bg-white', 'shadow-sm', 'text-primary');
+                monthlyBtn.classList.add('text-gray-500');
+                
+                standardPrice.textContent = '$9.60';
+                standardPeriod.textContent = '/month';
+                proPrice.textContent = '$19.20';
+                proPeriod.textContent = '/month';
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

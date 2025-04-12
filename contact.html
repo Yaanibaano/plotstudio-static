@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - StoryForge Pro</title>
+    <meta name="description" content="Get in touch with the StoryForge Pro team for support, feedback, or partnership inquiries.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3047',
+                        secondary: '#1B1E2E',
+                        accent: '#E07A5F', 
+                        accentLight: '#F2D0C2',
+                        accentDark: '#C05F46',
+                        light: '#F7F3E9',
+                        dark: '#1B1C25',
+                        paper: '#F5F0E1'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-paper font-sans">
+    <div class="relative overflow-hidden">
+        <!-- Navigation -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6">
+            <header class="flex justify-between items-center mb-12">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-extrabold text-primary">StoryForge<span class="text-accent">Pro</span></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-10">
+                    <a href="features.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">Features</a>
+                    <a href="pricing.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">Pricing</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">About</a>
+                    <a href="contact.html" class="text-sm font-medium text-primary hover:text-accent hover-underline">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm font-medium text-primary hover:text-accent hover-underline">Log in</a>
+                    <a href="pricing.html" class="btn btn-primary text-sm">Try Free</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-primary p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white rounded-lg shadow-lg p-6 absolute top-20 right-4 left-4 z-50">
+                <nav class="flex flex-col space-y-4">
+                    <a href="features.html" class="text-base font-medium text-gray-600 hover:text-primary hover:underline">Features</a>
+                    <a href="pricing.html" class="text-base font-medium text-gray-600 hover:text-primary hover:underline">Pricing</a>
+                    <a href="about.html" class="text-base font-medium text-gray-600 hover:text-primary hover:underline">About</a>
+                    <a href="contact.html" class="text-base font-medium text-primary hover:underline">Contact</a>
+                    <div class="pt-4 border-t border-gray-200">
+                        <a href="#" class="block text-base font-medium text-gray-600 hover:text-primary hover:underline mb-3">Log in</a>
+                        <a href="pricing.html" class="btn btn-primary text-base w-full text-center">Try Free</a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Page Header -->
+            <div class="bg-paper py-20 md:py-24 border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-6 shadow-sm">CONTACT US</span>
+                        <h1 class="text-4xl md:text-5xl font-black text-primary mb-6">Get in Touch</h1>
+                        <p class="text-xl text-gray-600 mx-auto">Have questions or feedback? We'd love to hear from you. Our team is ready to help.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Options Section -->
+    <section class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+                <!-- Support Option -->
+                <div class="bg-paper rounded-xl p-8 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-14 h-14 bg-accentLight rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-xl text-accentDark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Customer Support</h3>
+                    <p class="text-gray-600 mb-6">Need help with your account or have technical questions about using StoryForge Pro?</p>
+                    <a href="#contact-form" class="text-accent hover:text-accentDark font-medium transition-colors flex items-center gap-1">
+                        Get Support
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Sales Option -->
+                <div class="bg-paper rounded-xl p-8 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-14 h-14 bg-accentLight rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase text-xl text-accentDark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Sales Inquiries</h3>
+                    <p class="text-gray-600 mb-6">Interested in team licenses or have questions about which plan is right for you?</p>
+                    <a href="#contact-form" class="text-accent hover:text-accentDark font-medium transition-colors flex items-center gap-1">
+                        Contact Sales
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Partnership Option -->
+                <div class="bg-paper rounded-xl p-8 shadow-sm hover:shadow-md transition-all">
+                    <div class="w-14 h-14 bg-accentLight rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-xl text-accentDark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Partnerships</h3>
+                    <p class="text-gray-600 mb-6">Interested in partnering with StoryForge Pro for your writing program or business?</p>
+                    <a href="#contact-form" class="text-accent hover:text-accentDark font-medium transition-colors flex items-center gap-1">
+                        Discuss Partnership
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Contact Form Section -->
+            <div id="contact-form" class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- Form Header -->
+                <div class="bg-primary px-8 py-6">
+                    <h2 class="text-2xl font-bold text-white">Send Us a Message</h2>
+                    <p class="text-white text-opacity-80">We'll get back to you as soon as possible</p>
+                </div>
+                
+                <!-- Form Content -->
+                <div class="p-8">
+                    <form class="space-y-6">
+                        <!-- Name Input -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent transition-colors" placeholder="John Doe">
+                        </div>
+                        
+                        <!-- Email Input -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent transition-colors" placeholder="john@example.com">
+                        </div>
+                        
+                        <!-- Subject Dropdown -->
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent transition-colors">
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="support">Product Support</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Product Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Message Textarea -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent transition-colors" placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div>
+                            <button type="submit" class="w-full btn btn-primary py-3 text-lg font-bold">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ and Additional Contact Section -->
+    <section id="faq" class="bg-paper py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- FAQ Column -->
+                <div>
+                    <h2 class="text-2xl font-bold text-primary mb-6">Frequently Asked Questions</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg shadow-sm p-6">
+                            <h3 class="font-bold text-primary">What are your support hours?</h3>
+                            <p class="text-gray-600 mt-2">Our support team is available Monday through Friday, 9 AM to 6 PM EST. We strive to respond to all inquiries within 24 hours.</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-6">
+                            <h3 class="font-bold text-primary">Do you offer phone support?</h3>
+                            <p class="text-gray-600 mt-2">We primarily offer support via email and our help center. Phone support is available for Professional plan subscribers by appointment.</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm p-6">
+                            <h3 class="font-bold text-primary">How can I request a feature?</h3>
+                            <p class="text-gray-600 mt-2">We love hearing your ideas! You can submit feature requests through our contact form or by emailing features@storyforge.pro.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Contact Info Column -->
+                <div id="connect">
+                    <h2 class="text-2xl font-bold text-primary mb-6">Additional Ways to Connect</h2>
+                    
+                    <!-- Email Option -->
+                    <div class="flex items-start mb-8">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accentLight rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-envelope text-lg text-accentDark"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-primary">Email Us Directly</h3>
+                            <p class="text-gray-600 mt-1">For general inquiries:</p>
+                            <a href="mailto:hello@storyforge.pro" class="text-accent hover:text-accentDark transition-colors">hello@storyforge.pro</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Help Center Option -->
+                    <div class="flex items-start mb-8">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accentLight rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-question-circle text-lg text-accentDark"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-primary">Visit Our Help Center</h3>
+                            <p class="text-gray-600 mt-1">Find answers to common questions in our comprehensive knowledge base.</p>
+                            <a href="#" class="text-accent hover:text-accentDark transition-colors">Browse Help Articles</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Option -->
+                    <div class="flex items-start mb-8">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accentLight rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-users text-lg text-accentDark"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-primary">Join Our Community</h3>
+                            <p class="text-gray-600 mt-1">Connect with other writers and get peer support in our community forums.</p>
+                            <a href="#" class="text-accent hover:text-accentDark transition-colors">Visit Community</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accentLight rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-share-alt text-lg text-accentDark"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-primary">Follow Us</h3>
+                            <p class="text-gray-600 mt-1">Stay updated with the latest news and tips:</p>
+                            <div class="flex space-x-4 mt-2">
+                                <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                                    <i class="fab fa-facebook text-xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                                    <i class="fab fa-linkedin text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map Section -->
+    <section id="location" class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Our Location</h2>
+                <p class="text-xl text-gray-600">Visit our headquarters in Boston's innovation district</p>
+            </div>
+            
+            <div class="bg-gray-200 h-96 rounded-xl overflow-hidden shadow-lg">
+                <!-- Replace with actual map embed code -->
+                <div class="w-full h-full bg-gray-300 flex items-center justify-center">
+                    <p class="text-gray-600">Map Embed Placeholder</p>
+                    <!-- In a real implementation, you would use:
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!..." 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe> -->
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <address class="not-italic text-gray-600">
+                    <strong class="text-primary block mb-2">StoryForge Pro Headquarters</strong>
+                    123 Innovation Way, Suite 400<br>
+                    Boston, MA 02210<br>
+                </address>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-paper pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
+                <div>
+                    <span class="text-2xl font-bold text-primary">StoryForge<span class="text-accent">Pro</span></span>
+                    <p class="mt-6 text-gray-600">The ultimate storytelling platform for novelists, screenwriters, and creative minds.</p>
+                    <div class="flex space-x-5 mt-8">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-6">Product</h3>
+                    <ul class="space-y-4">
+                        <li><a href="features.html" class="text-gray-600 hover:text-accent transition-colors font-medium">Features</a></li>
+                        <li><a href="pricing.html" class="text-gray-600 hover:text-accent transition-colors font-medium">Pricing</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Templates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-6">Company</h3>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-accent transition-colors font-medium">About</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-accent transition-colors font-medium">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-6">Resources</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Writer's Guide</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Documentation</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 text-gray-600">
+                <div class="flex flex-col md:flex-row md:justify-between">
+                    <p>&copy; 2025 StoryForge Pro. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-accent transition-colors">Terms</a>
+                        <a href="#" class="hover:text-accent transition-colors">Privacy</a>
+                        <a href="#" class="hover:text-accent transition-colors">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1267 @@
+/* Custom styles for StoryForge Pro Marketing Website */
+
+/* Base styles for consistent spacing and colors */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+  background-color: #F5F0E1;
+  overflow-x: hidden;
+  color: #2D3047;
+}
+
+/* Section styling */
+.section {
+  padding: 6rem 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 8rem 0;
+  }
+}
+
+/* Container */
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Color system */
+.bg-paper {
+  background-color: #F5F0E1;
+}
+
+.bg-paper::after {
+  display: none;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.bg-white::before {
+  display: none;
+}
+
+/* Section transitions */
+.section-transition {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-transition::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Feature cards with consistent styling */
+.feature-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background-color: rgba(224, 122, 95, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+  color: #2D3047;
+  font-size: 1.75rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2D3047;
+}
+
+.feature-description {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Consistent button styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #E07A5F;
+  color: white;
+  box-shadow: 0 4px 14px rgba(224, 122, 95, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: #C05F46;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(224, 122, 95, 0.3);
+}
+
+.btn-secondary {
+  background-color: #F5F5F5;
+  color: #2D3047;
+}
+
+.btn-secondary:hover {
+  background-color: #EAEAEA;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+  font-weight: 800;
+  position: relative;
+}
+
+h1 {
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+/* Underlined text effect */
+.underline-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -0.2em;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #FF6B6B;
+}
+
+/* Ink splatter effects */
+.ink-splatter {
+  position: relative;
+}
+
+.ink-splatter::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://www.transparenttextures.com/patterns/cardboard.png');
+  transform: rotate(45deg);
+  opacity: 0.05;
+  z-index: -1;
+}
+
+/* Rounded corners for all containers */
+.rounded-xl {
+  border-radius: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-2xl {
+  border-radius: 1.25rem;
+}
+
+/* Shadows */
+.shadow-soft {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Notebook shadow effect */
+.notebook-shadow {
+  box-shadow: 
+    15px 15px 30px rgba(0, 0, 0, 0.1),
+    -5px -5px 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Transitions */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+a {
+  transition: all 0.2s ease;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards styling */
+.card {
+  background-color: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Paper card effect */
+.paper-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.paper-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/lined-paper.png');
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.paper-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Accent border */
+.border-accent {
+  border-color: #FF6B6B;
+  border-width: 2px;
+}
+
+/* Image wrapper */
+.img-wrapper {
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.img-wrapper img {
+  transition: transform 0.5s ease;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Checkmark list */
+.check-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FF6B6B;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Handwritten callouts */
+.handwritten {
+  font-family: 'Caveat', cursive;
+  color: #2D3047;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  transform: rotate(-2deg);
+  display: inline-block;
+}
+
+.handwritten-accent {
+  color: #FF6B6B;
+}
+
+/* Stats counter */
+.stats-counter {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #2D3047;
+  line-height: 1;
+}
+
+.stats-label {
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Grid layouts */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Background blob */
+.bg-blob {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 100%;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  filter: blur(100px);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #F5F0E1;
+  z-index: 50;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* Hide scrollbar but allow scrolling */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+
+/* Gradient button */
+.gradient-button {
+  background: linear-gradient(135deg, #FF6B6B, #2D3047);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+}
+
+.gradient-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.4);
+}
+
+/* Custom focus styles */
+a:focus, button:focus {
+  outline: none;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #FF6B6B;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Diagonal shape divider */
+.diagonal-divider {
+  position: relative;
+}
+
+.diagonal-divider::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8vw;
+  background-color: #F5F0E1;
+  clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+}
+
+/* Card with image */
+.img-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.img-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.img-card:hover .img-card__img {
+  transform: scale(1.05);
+}
+
+.img-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(45, 48, 71, 0.9), rgba(45, 48, 71, 0));
+  color: white;
+}
+
+/* Quote card */
+.quote-card {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  background-color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.quote-card::before {
+  content: '"';
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(255, 107, 107, 0.15);
+}
+
+/* Animation for hero section */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Handwritten text effect */
+@keyframes writing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.writing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.writing-animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #F5F0E1;
+  animation: writing 2.5s steps(40) forwards;
+  animation-delay: 0.5s;
+}
+
+/* Clean text styling without animation */
+.text-gradient {
+  background: #E07A5F;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  animation: none;
+}
+
+/* Offset shadow */
+.offset-shadow {
+  position: relative;
+}
+
+.offset-shadow::after {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 107, 107, 0.2);
+  border-radius: 1.5rem;
+  z-index: -1;
+}
+
+/* Hover underline animation */
+.hover-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #FF6B6B;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Book spine effect */
+.book-spine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to right, #2D3047, #1B1E2E);
+  border-radius: 4px 0 0 4px;
+  box-shadow: inset -2px 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth transitions */
+.page-transition {
+  transition: opacity 0.4s ease;
+}
+
+.page-exit {
+  opacity: 0;
+}
+
+/* Create placeholder for images */
+.image-placeholder {
+  background: linear-gradient(110deg, #f6f7f8 8%, #edeef1 18%, #f6f7f8 33%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+@keyframes shimmer {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+/* Feature icon background blur */
+.icon-blur {
+  position: relative;
+}
+
+.icon-blur::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+/* Highlight boxes effect */
+.highlight-box {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 1.5rem;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Page fold effect */
+.page-fold {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-fold::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.05) 50%);
+  top: 0;
+  right: 0;
+}
+
+/* Subtle underline animation for nav links */
+.nav-link-hover {
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Paper texture backgrounds */
+.paper-texture {
+  position: relative;
+}
+
+.paper-texture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Dot pattern background */
+.dot-pattern {
+  background-image: radial-gradient(circle, #2D3047 1.5px, transparent 1.5px);
+  background-size: 25px 25px;
+  opacity: 0.1;
+}
+
+/* Pen ink background */
+.ink-background {
+  position: relative;
+}
+
+.ink-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+  opacity: 0.03;
+  z-index: -1;
+}
+
+/* Card grid layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Feature count number */
+.feature-number {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background: #F5F0E1;
+  border: 2px solid #e5e7eb;
+  color: #9ca3af;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Mobile nav styles */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(245, 240, 225, 0.98);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 24px 24px;
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav.open {
+  transform: translateY(0);
+}
+
+/* Hero image frame */
+.hero-frame {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 0, 0.2),
+    0 10px 20px -5px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Book design elements */
+.book-cover {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.2),
+    5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-binding {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  background: linear-gradient(to right, #1B1E2E, #2D3047);
+  box-shadow: inset -2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+  margin: 4rem 0;
+  position: relative;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 30px;
+  background-color: #F5F0E1;
+}
+
+/* Background circles */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: -1;
+  filter: blur(50px);
+}
+
+/* Subtle bounce animation */
+@keyframes subtle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.subtle-bounce {
+  animation: subtle-bounce 4s infinite ease-in-out;
+}
+
+/* Custom border radius utility classes */
+.rounded-4xl {
+  border-radius: 2rem;
+}
+
+.rounded-5xl {
+  border-radius: 3rem;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Bold accent strips */
+.accent-strip {
+  position: relative;
+}
+
+.accent-strip::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #FF6B6B;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Rotated elements */
+.rotate-3 {
+  transform: rotate(3deg);
+}
+
+.rotate-neg-3 {
+  transform: rotate(-3deg);
+}
+
+/* Button with shadow */
+.btn-shadow {
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+}
+
+/* Notebook lined paper */
+.lined-paper {
+  background-color: white;
+  background-image: linear-gradient(#e5e5e5 1px, transparent 1px);
+  background-size: 100% 26px;
+  position: relative;
+  padding: 26px;
+  line-height: 26px;
+}
+
+.lined-paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 1px;
+  background: #FF6B6B;
+  opacity: 0.4;
+}
+
+/* Background gradient */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #2D3047, #1B1E2E);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #FF6B6B, #F85959);
+}
+
+/* Colorful blob background */
+.bg-blob-colorful {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  filter: blur(100px);
+  opacity: 0.1;
+  border-radius: 100%;
+  background: radial-gradient(circle at center, #FF6B6B, #2D3047);
+  z-index: -1;
+}
+
+/* Bold call-to-action */
+.bold-cta {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #FF6B6B, #F85959);
+  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.3);
+  transition: all 0.3s ease;
+}
+
+.bold-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2D3047, #1B1E2E);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bold-cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255, 107, 107, 0.4);
+}
+
+.bold-cta:hover::before {
+  opacity: 1;
+}
+
+/* Text gradients */
+.text-gradient-primary {
+  background: linear-gradient(90deg, #2D3047, #1B1E2E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(90deg, #FF6B6B, #F85959);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Bold section titles */
+.section-title {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  width: 4rem;
+  height: 0.25rem;
+  background: #FF6B6B;
+  border-radius: 0.25rem;
+}
+
+/* Accent box backgrounds */
+.accent-box {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  background-color: white;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.accent-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+  background: linear-gradient(90deg, #FF6B6B, #F85959);
+  z-index: 0;
+}
+
+/* Pen and ink decorative element */
+.pen-ink-decoration {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z' fill='%232D3047'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+/* Section headers with accent style */
+.section-header {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FF6B6B;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 107, 107, 0.1);
+  border-radius: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2D3047;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  height: 4px;
+  width: 80px;
+  background-color: #FF6B6B;
+  border-radius: 2px;
+}
+
+.section-description {
+  font-size: 1.25rem;
+  color: #6b7280;
+  max-width: 800px;
+}
+
+/* Ultra-modern hero styles */
+.hero-text {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Modern letter spacing for hero heading */
+h1 span {
+  letter-spacing: -0.03em;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animated line for hero */
+.animated-line {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.animated-line::after {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 0;
+  bottom: 10px;
+  left: 0;
+  background-color: #FF6B6B;
+  z-index: -1;
+  transition: width 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animated-line.animate::after {
+  width: 100%;
+}
+
+/* Modern button style */
+.btn-modern {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.btn-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.btn-modern:hover::before {
+  width: 100%;
+}
+
+/* Circle decoration */
+.circle-decor {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Text reveal animation for hero heading */
+@keyframes text-reveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.reveal-text {
+  overflow: hidden;
+  position: relative;
+}
+
+.reveal-text > span {
+  display: block;
+  animation: text-reveal 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  opacity: 0;
+}
+
+.reveal-text:nth-child(1) > span {
+  animation-delay: 0.1s;
+}
+
+.reveal-text:nth-child(2) > span {
+  animation-delay: 0.3s;
+}
+
+.reveal-text:nth-child(3) > span {
+  animation-delay: 0.5s;
+}
+
+/* Softer app preview gradient */
+.from-paper.to-white {
+  background: linear-gradient(135deg, #F5F0E1, #FFFFFF);
+}
+
+/* Fix feature icon hover state */
+.feature-icon-wrapper.group-hover\:bg-accent.group-hover\:text-white {
+  transition: all 0.3s ease;
+}
+
+.feature-icon-wrapper.group-hover\:bg-accent.group-hover\:text-white .feature-icon {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon-wrapper {
+  background-color: #E07A5F;
+}
+
+.feature-card:hover .feature-icon-wrapper .feature-icon {
+  color: white;
+}
+
+/* Update accent colors for better contrast */
+.bg-accent\/10 {
+  background-color: rgba(224, 122, 95, 0.1);
+}
+
+.text-accent {
+  color: #C05F46;
+}
+
+/* For better contrast in feature icons */
+.feature-icon-wrapper {
+  background-color: rgba(224, 122, 95, 0.15);
+}
+
+/* Add softer hover effects */
+.hover\:text-accent:hover {
+  color: #C05F46;
+}
+
+.hover\:border-accent:hover {
+  border-color: #E07A5F;
+} 

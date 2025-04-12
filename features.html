@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - StoryForge Pro</title>
+    <meta name="description" content="Explore the powerful features of StoryForge Pro to enhance your writing workflow.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3047',
+                        secondary: '#1B1E2E',
+                        accent: '#E07A5F', 
+                        accentLight: '#F2D0C2',
+                        accentDark: '#C05F46',
+                        light: '#F7F3E9',
+                        dark: '#1B1C25',
+                        paper: '#F5F0E1'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-paper font-sans">
+    <div class="relative overflow-hidden">
+        <!-- Navigation -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6">
+            <header class="flex justify-between items-center mb-12">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-extrabold text-primary">StoryForge<span class="text-accent">Pro</span></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-10">
+                    <a href="features.html" class="text-sm font-medium text-primary hover:text-accent hover-underline">Features</a>
+                    <a href="pricing.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">Pricing</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">About</a>
+                    <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm font-medium text-primary hover:text-accent hover-underline">Log in</a>
+                    <a href="pricing.html" class="btn btn-primary text-sm">Try Free</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-primary p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white rounded-lg shadow-lg p-6 absolute top-20 right-4 left-4 z-50">
+                <nav class="flex flex-col space-y-4">
+                    <a href="features.html" class="text-base font-medium text-primary hover:underline">Features</a>
+                    <a href="pricing.html" class="text-base font-medium text-gray-600 hover:text-primary hover:underline">Pricing</a>
+                    <a href="about.html" class="text-base font-medium text-gray-600 hover:text-primary hover:underline">About</a>
+                    <a href="contact.html" class="text-base font-medium text-gray-600 hover:text-primary hover:underline">Contact</a>
+                    <div class="pt-4 border-t border-gray-200">
+                        <a href="#" class="block text-base font-medium text-gray-600 hover:text-primary hover:underline mb-3">Log in</a>
+                        <a href="pricing.html" class="btn btn-primary text-base w-full text-center">Try Free</a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Page Header -->
+            <div class="bg-paper py-20 md:py-24 border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-6 shadow-sm">FEATURES</span>
+                        <h1 class="text-4xl md:text-5xl font-black text-primary mb-6">Powerful Tools for Modern Writers</h1>
+                        <p class="text-xl text-gray-600 mx-auto">Everything you need to organize, write, and perfect your stories in one intuitive platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visual Timeline Feature -->
+    <section class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide mb-4 shadow-sm">FLAGSHIP FEATURE</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Visual Timeline</h2>
+                    <p class="text-lg text-gray-600 mb-6">Our intuitive visual timeline makes it simple to organize your story's structure, from major plot points to subtle character developments. Drag and drop events, rearrange scenes, and visualize your narrative arc.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accentLight flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-xs text-accentDark"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Create multiple timelines for complex narratives</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accentLight flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-xs text-accentDark"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Track character arcs alongside plot developments</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accentLight flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-xs text-accentDark"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Identify pacing issues with visual cues</p>
+                        </li>
+                    </ul>
+                    <div class="mt-10">
+                        <a href="#" class="btn btn-primary">Try the Timeline</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-full h-[450px] bg-gray-100 rounded-2xl shadow-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Visual Timeline Feature" class="w-full h-full object-cover">
+                        <!-- Placeholder: In real implementation, this would be a screenshot of the actual timeline feature -->
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/5 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/5 rounded-full blur-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Development Feature -->
+    <section class="bg-paper py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div class="w-full h-[450px] bg-gray-100 rounded-2xl shadow-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Character Development Feature" class="w-full h-full object-cover">
+                        <!-- Placeholder: In real implementation, this would be a screenshot of the character tools -->
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/5 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/5 rounded-full blur-xl"></div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide mb-4 shadow-sm">CORE FEATURE</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Character Development</h2>
+                    <p class="text-lg text-gray-600 mb-6">Create rich, multidimensional characters with our comprehensive character development tools. Track relationships, motivations, and arcs throughout your story.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accentLight flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-xs text-accentDark"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Detailed character profiles with customizable fields</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accentLight flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-xs text-accentDark"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Relationship maps to visualize character connections</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accentLight flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-xs text-accentDark"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Track character growth and consistency throughout your manuscript</p>
+                        </li>
+                    </ul>
+                    <div class="mt-10">
+                        <a href="#" class="btn btn-primary">Explore Character Tools</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World Building Feature -->
+    <section class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide mb-4 shadow-sm">ESSENTIAL TOOL</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">World Building</h2>
+                    <p class="text-lg text-gray-600 mb-6">Craft immersive worlds with our dedicated world-building system. Create detailed locations, cultures, magic systems, and technology with ease.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accentLight flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-xs text-accentDark"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Interactive maps with location linking</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accentLight flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-xs text-accentDark"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Encyclopedic entries for world elements</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-accentLight flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-xs text-accentDark"></i>
+                            </div>
+                            <p class="ml-3 text-gray-600">Historical timeline for your fictional world</p>
+                        </li>
+                    </ul>
+                    <div class="mt-10">
+                        <a href="#" class="btn btn-primary">Explore World Building</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-full h-[450px] bg-gray-100 rounded-2xl shadow-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518744386442-2d48ac5b5fd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="World Building Feature" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/5 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/5 rounded-full blur-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Features Grid -->
+    <section class="bg-paper py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide mb-4 shadow-sm">COMPREHENSIVE TOOLKIT</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Essential Tools for Every Writer</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">StoryForge Pro brings together everything you need to plan, write, and refine your stories.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="bg-white rounded-xl shadow-md p-8 transition-all hover:shadow-lg">
+                    <div class="w-14 h-14 bg-accentLight rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-book-open text-xl text-accentDark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Manuscript Editor</h3>
+                    <p class="text-gray-600">A distraction-free writing environment with powerful formatting tools. Focus on your words while we handle the structure.</p>
+                </div>
+                
+                <!-- Feature Card 2 -->
+                <div class="bg-white rounded-xl shadow-md p-8 transition-all hover:shadow-lg">
+                    <div class="w-14 h-14 bg-accentLight rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-sitemap text-xl text-accentDark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Plot Mapping</h3>
+                    <p class="text-gray-600">Visualize your story's structure with our plot mapping tools. Track narrative arcs, conflicts, and resolutions.</p>
+                </div>
+                
+                <!-- Feature Card 3 -->
+                <div class="bg-white rounded-xl shadow-md p-8 transition-all hover:shadow-lg">
+                    <div class="w-14 h-14 bg-accentLight rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-xl text-accentDark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Research Manager</h3>
+                    <p class="text-gray-600">Keep all your research organized and easily accessible. Import articles, images, and notes directly into your project.</p>
+                </div>
+                
+                <!-- Feature Card 4 -->
+                <div class="bg-white rounded-xl shadow-md p-8 transition-all hover:shadow-lg">
+                    <div class="w-14 h-14 bg-accentLight rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tasks text-xl text-accentDark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Goal Tracking</h3>
+                    <p class="text-gray-600">Set and track writing goals with daily word counts, deadlines, and progress visualization to keep you motivated.</p>
+                </div>
+                
+                <!-- Feature Card 5 -->
+                <div class="bg-white rounded-xl shadow-md p-8 transition-all hover:shadow-lg">
+                    <div class="w-14 h-14 bg-accentLight rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-xl text-accentDark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Cloud Sync</h3>
+                    <p class="text-gray-600">Access your stories from anywhere with secure cloud synchronization. Never lose your work again.</p>
+                </div>
+                
+                <!-- Feature Card 6 -->
+                <div class="bg-white rounded-xl shadow-md p-8 transition-all hover:shadow-lg">
+                    <div class="w-14 h-14 bg-accentLight rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-file-export text-xl text-accentDark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Export Options</h3>
+                    <p class="text-gray-600">Export your work in multiple formats including DOCX, PDF, and EPUB, ready for submission or self-publishing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="relative bg-gradient-to-br from-primary/5 to-white rounded-3xl overflow-hidden shadow-xl p-12 md:p-16">
+                <!-- Accent top border -->
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-accentLight to-accent"></div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <span class="inline-block bg-accent text-white text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-6 shadow-sm">START WRITING TODAY</span>
+                        <h2 class="text-4xl md:text-5xl font-black text-primary mb-6">Transform Your Writing Process</h2>
+                        <p class="text-xl text-gray-600 mx-auto max-w-2xl">
+                            Join thousands of writers who've elevated their storytelling with StoryForge Pro.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="pricing.html" class="btn btn-primary py-4 px-8 text-lg font-bold">
+                            View Pricing Plans
+                        </a>
+                        <a href="#" class="text-primary font-medium hover:text-accent transition-all flex items-center gap-2">
+                            Schedule a Demo
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-paper pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
+                <div>
+                    <span class="text-2xl font-bold text-primary">StoryForge<span class="text-accent">Pro</span></span>
+                    <p class="mt-6 text-gray-600">The ultimate storytelling platform for novelists, screenwriters, and creative minds.</p>
+                    <div class="flex space-x-5 mt-8">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-6">Product</h3>
+                    <ul class="space-y-4">
+                        <li><a href="features.html" class="text-gray-600 hover:text-accent transition-colors font-medium">Features</a></li>
+                        <li><a href="pricing.html" class="text-gray-600 hover:text-accent transition-colors font-medium">Pricing</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Templates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-6">Company</h3>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-gray-600 hover:text-accent transition-colors font-medium">About</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Blog</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-6">Resources</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Writer's Guide</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Documentation</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 text-gray-600">
+                <div class="flex flex-col md:flex-row md:justify-between">
+                    <p>&copy; 2025 StoryForge Pro. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-accent transition-colors">Terms</a>
+                        <a href="#" class="hover:text-accent transition-colors">Privacy</a>
+                        <a href="#" class="hover:text-accent transition-colors">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="js/main.js"></script>
+<script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            }
+        });
+    });
+</script>
+</body>
+</html>
