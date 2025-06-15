@@ -15,14 +15,24 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2D3047',
-                        secondary: '#1B1E2E',
-                        accent: '#E07A5F',
-                        accentLight: '#F2D0C2',
-                        accentDark: '#C05F46',
-                        light: '#F7F3E9',
-                        dark: '#1B1C25',
-                        paper: '#F5F0E1'
+                        primary: '#1a1a1a',
+                        secondary: '#4a4a4a',
+                        accent: '#d97706',
+                        light: '#f8fafc',
+                        paper: '#ffffff',
+                        warm: '#fefbf3',
+                        gray: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
                     },
                     fontFamily: {
                         'sans': ['Inter', 'sans-serif'],
@@ -36,19 +46,19 @@
 <body class="bg-paper font-sans">
     <div class="relative overflow-hidden">
         <!-- Navigation -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6">
-            <header class="flex justify-between items-center mb-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6">
+            <header class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <span class="text-2xl font-extrabold text-primary">Plot<span class="text-accent">Panda</span></span>
+                    <span class="text-2xl font-bold text-primary">PlotPanda</span>
                 </div>
-                <nav class="hidden md:flex items-center space-x-10">
-                    <a href="features.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">Features</a>
-                    <a href="pricing.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">Pricing</a>
-                    <a href="blog.html" class="text-sm font-medium text-gray-600 hover:text-primary hover-underline">Blog</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="features.html" class="text-gray-600 hover:text-primary transition-colors duration-200">Features</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary transition-colors duration-200">Pricing</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-primary transition-colors duration-200">Blog</a>
                 </nav>
-                <div class="flex items-center space-x-6">
-                    <a href="https://cognito-abn.pages.dev/" class="text-sm font-medium text-primary hover:text-accent hover-underline">Log in</a>
-                    <a href="https://cognito-abn.pages.dev/" class="btn btn-primary text-sm">Try Free</a>
+                <div class="flex items-center space-x-4">
+                    <a href="https://cognito-abn.pages.dev/" class="text-gray-600 hover:text-primary transition-colors duration-200">Log in</a>
+                    <a href="https://cognito-abn.pages.dev/" class="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-lg transition-colors duration-200">Start Writing</a>
                 </div>
                 <div class="md:hidden">
                     <button class="text-primary p-2">
@@ -58,96 +68,71 @@
                     </button>
                 </div>
             </header>
+        </div>
 
             <!-- Hero Section -->
-            <div class="bg-paper py-20 md:py-32 border-b border-gray-200">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="relative">
-                            <!-- Red vertical line aligned with text - slightly enhanced -->
-                            <div class="absolute left-0 top-0 bottom-0 w-1 bg-accent rounded-full"></div>
-                            <div class="pl-6">
-                                <div class="mb-8 hero-text">
-                                    <div class="flex items-center">
-                                        <span class="text-xs font-bold tracking-widest bg-accent/10 text-accent px-4 py-1.5 rounded-full mb-4">STORY CREATION SUITE</span>
-                                    </div>
-                                    <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] text-primary">
-                                        <span class="block reveal-text">
-                                            <span class="text-gradient font-black">Plot, Write, and Organize</span>
-                                        </span>
-                                        <span class="flex items-center animated-line reveal-text animate">
-                                            <span>in One Place</span>
-                                            <span class="ml-4 inline-block w-20 h-1 bg-accent rounded-full"></span>
-                                        </span>
-                                    </h1>
-                                </div>
-                                <p class="text-xl text-gray-600 mb-10 font-medium max-w-lg">
-                                    Visualize your timeline, map your world, develop your characters, and write your script, all within a single, seamless experience.
-                                </p>
-                                <div class="flex flex-col sm:flex-row gap-5 mb-8">
-                                    <a href="https://cognito-abn.pages.dev/" class="btn btn-primary group">
-                                        Start Creating Your Story
-                                        <span class="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
-                                    </a>
-                                </div>
+            <div class="bg-paper py-24 md:py-40 relative overflow-hidden">
+                <!-- Background decorative elements -->
+                <div class="absolute inset-0 overflow-hidden">
+                    <div class="absolute top-20 left-10 w-32 h-32 bg-accent/5 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-20 right-10 w-40 h-40 bg-accent/5 rounded-full blur-3xl"></div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/3 rounded-full blur-3xl"></div>
+                </div>
 
-                                <!-- Enhanced decorative tag with icon -->
-                                <div class="inline-flex items-center gap-2 bg-primary/5 px-4 py-2 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span class="text-xs font-semibold text-primary">Perfect for novelists & storytellers</span>
-                                </div>
-                            </div>
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 text-center relative z-10">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full text-sm font-medium text-gray-700 mb-8 shadow-sm">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                        The complete story creation suite
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-5xl md:text-7xl font-black text-primary mb-8 leading-tight tracking-tight">
+                        The Complete Story
+                        <span class="text-accent">Creation Suite</span>
+                    </h1>
+
+                    <!-- Subheading -->
+                    <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+                        <strong class="font-semibold text-gray-800">Plot, Write, and Organize in One Place.</strong>
+                        Visualize your timeline, map your world, develop your characters, and write your script, all within a single, seamless experience.
+                    </p>
+
+
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                        <a href="https://cognito-abn.pages.dev/" class="group relative bg-accent hover:bg-accent/90 text-white font-bold px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg">
+                            <span class="relative z-10">Start Creating Your Story</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-accent to-accent/80 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        <a href="#features" class="group flex items-center space-x-2 text-gray-700 hover:text-accent font-semibold px-8 py-4 transition-colors duration-200">
+                            <span>See how it works</span>
+                            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-500">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Free trial available</span>
                         </div>
-                        <div class="relative">
-                            <!-- Enhanced app preview with floating animation -->
-                            <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-[500px] float-animation">
-                                <!-- App header bar with improved styling -->
-                                <div class="w-full h-12 bg-primary flex items-center justify-between px-4">
-                                    <div class="flex items-center space-x-2">
-                                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                                    </div>
-                                    <div class="absolute top-2 right-4 bg-accent text-white px-4 py-1.5 rounded-full font-bold text-xs">
-                                        PlotPanda
-                                    </div>
-                                </div>
-
-                                <!-- App content with clean design -->
-                                <div class="w-full h-[calc(100%-48px)] bg-white flex items-center justify-center p-6">
-                                    <div class="w-full max-w-md">
-                                        <div class="text-center mb-8">
-                                            <div class="text-3xl font-bold text-primary mb-2">Plot<span class="text-accent">Panda</span></div>
-                                            <div class="text-lg text-gray-600 mb-8">Story Creation Suite</div>
-                                        </div>
-
-                                        <!-- Mock UI elements with clean design -->
-                                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 mb-6">
-                                            <div class="flex items-center justify-between mb-4">
-                                                <div class="font-bold text-primary">My Projects</div>
-                                                <div class="text-xs px-2 py-1 bg-accent/10 text-accent rounded-md">+ New</div>
-                                            </div>
-                                            <div class="space-y-3">
-                                                <div class="p-3 bg-gray-50 rounded-lg flex justify-between items-center border border-gray-100">
-                                                    <div class="font-medium">The Hidden Oracle</div>
-                                                    <div class="text-xs text-gray-500">Today</div>
-                                                </div>
-                                                <div class="p-3 bg-gray-50 rounded-lg flex justify-between items-center border border-gray-100">
-                                                    <div class="font-medium">Midnight's Shadow</div>
-                                                    <div class="text-xs text-gray-500">2d ago</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex justify-between items-center">
-                                            <div class="w-[45%] h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent font-medium text-sm">Continue</div>
-                                            <div class="w-[45%] h-10 bg-gray-100 rounded-lg flex items-center justify-center text-primary font-medium text-sm">New Project</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Pricing coming soon</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Export your work anytime</span>
                         </div>
                     </div>
                 </div>
@@ -155,429 +140,305 @@
         </div>
     </div>
 
-    <!-- Core Differentiators Section -->
-    <div class="bg-white py-32">
-        <div id="features" class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <!-- Features Section Header with Softer Colors -->
-            <div class="mb-16">
-                <div class="flex flex-col items-center text-center">
+    <!-- Transition Section -->
+    <div class="bg-paper py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">A Writing Space That <em class="text-accent not-italic">Works With You</em></h2>
+            <p class="text-xl text-gray-600 font-light">PlotPanda connects your timeline, characters, and writing so you always have the right context at the right moment.</p>
+        </div>
+    </div>
 
-                    <h2 class="text-5xl font-black text-primary mb-8 tracking-tight">How Plot Studio Will <span class="text-accent">Transform</span> Your Writing</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Visualize, connect, build, and write with perfect context using our powerful tools.</p>
-                </div>
-            </div>
+    <!-- Core Features Section -->
+    <div class="bg-paper py-24">
+        <div id="features" class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
 
-            <!-- Main Features Vertical Layout - Similar to Sudowrite -->
-            <div class="space-y-24 mb-24">
-                <!-- Feature 1: Timeline -->
-                <div class="feature-section">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <div class="order-2 md:order-1">
-                            <div class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                                <i class="fas fa-clock text-accent text-2xl"></i>
-                            </div>
-                            <h3 class="text-3xl font-bold text-primary mb-4">Visualize Your Story At A Glance</h3>
-                            <p class="text-lg text-gray-600 mb-6">
-                                Timeline shows your entire narrative in one view. Spot pacing issues, track character arcs, and perfect your story structure with simple drag-and-drop editing.
-                            </p>
-                            <ul class="space-y-3">
-                                <li class="flex items-center text-sm text-gray-700">
-                                    <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Drag and drop story elements
-                                </li>
-                                <li class="flex items-center text-sm text-gray-700">
-                                    <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Track character arcs visually
-                                </li>
-                                <li class="flex items-center text-sm text-gray-700">
-                                    <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Identify pacing issues instantly
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="order-1 md:order-2 bg-gray-100 rounded-xl p-6 shadow-md">
-                            <!-- Placeholder for Timeline Screenshot -->
-                            <div class="w-full h-80 bg-white rounded-lg border border-gray-200 flex items-center justify-center">
-                                <span class="text-gray-400">Timeline Screenshot</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature 2: Story Relationship Mapping -->
-                <div class="feature-section">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <div class="order-2">
-                            <div class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                                <i class="fas fa-project-diagram text-accent text-2xl"></i>
-                            </div>
-                            <h3 class="text-3xl font-bold text-primary mb-4">Story Relationship Mapping</h3>
-                            <p class="text-lg text-gray-600 mb-6">
-                                Powered by Excalidraw, our integrated relationship mapping tool helps you visualize character connections, plot dependencies, and narrative arcs in your story.
-                            </p>
-                            <ul class="space-y-3">
-                                <li class="flex items-center text-sm text-gray-700">
-                                    <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Map character relationships and motivations
-                                </li>
-                                <li class="flex items-center text-sm text-gray-700">
-                                    <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Visualize plot dependencies and story structure
-                                </li>
-                                <li class="flex items-center text-sm text-gray-700">
-                                    <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Track narrative threads across your story
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="order-1 bg-gray-100 rounded-xl p-6 shadow-md">
-                            <!-- Placeholder for Relationship Mapping Screenshot -->
-                            <div class="w-full h-80 bg-white rounded-lg border border-gray-200 flex items-center justify-center">
-                                <span class="text-gray-400">Relationship Mapping Screenshot</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature 3: World Builder -->
-                <div class="feature-section">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <div class="order-2 md:order-1">
-                            <div class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                                <i class="fas fa-atlas text-accent text-2xl"></i>
-                            </div>
-                            <h3 class="text-3xl font-bold text-primary mb-4">Build Worlds Worth Exploring</h3>
-                            <p class="text-lg text-gray-600 mb-6">
-                                World Builder organizes every detail of your story universe. Keep characters, locations, cultures, and rules at your fingertips for seamless worldbuilding.
-                            </p>
-                            <ul class="space-y-3">
-                                <li class="flex items-center text-sm text-gray-700">
-                                    <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Create detailed character profiles
-                                </li>
-                                <li class="flex items-center text-sm text-gray-700">
-                                    <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Develop locations and cultures
-                                </li>
-                                <li class="flex items-center text-sm text-gray-700">
-                                    <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Establish consistent world rules
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="order-1 md:order-2 bg-gray-100 rounded-xl p-6 shadow-md">
-                            <!-- Placeholder for World Builder Screenshot -->
-                            <div class="w-full h-80 bg-white rounded-lg border border-gray-200 flex items-center justify-center">
-                                <span class="text-gray-400">World Builder Screenshot</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature 4: Smart Editor -->
-            <div class="feature-section mb-24">
-                <div class="mb-16">
-                    <div class="flex flex-col items-center text-center">
-                        <span class="inline-block bg-accent text-white text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-4 shadow-sm">SMART EDITOR</span>
-                        <h2 class="text-4xl font-bold text-primary mb-6">Write With Perfect Context</h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Smart Editor keeps your entire story world at your fingertips as you write.</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 md:order-1">
-                        <div class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                            <i class="fas fa-pen-fancy text-accent text-2xl"></i>
-                        </div>
-                        <h3 class="text-3xl font-bold text-primary mb-4">Perfect Context At Your Fingertips</h3>
-                        <p class="text-lg text-gray-600 mb-6">
-                            Tag characters, locations, and story elements directly in your text for instant reference, ensuring consistency across even the most complex narratives.
+            <!-- Feature 1: Timeline -->
+            <div class="mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-4">Visual timeline that <em class="text-accent not-italic">connects</em> everything</h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Drag and drop story events to see your plot structure instantly. Spot pacing issues, track character arcs, and ensure your story flows perfectly from beginning to end.
                         </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-sm text-gray-700">
-                                <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Tag characters and locations in your text
-                            </li>
-                            <li class="flex items-center text-sm text-gray-700">
-                                <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Access entity details without leaving the editor
-                            </li>
-                            <li class="flex items-center text-sm text-gray-700">
-                                <svg class="w-5 h-5 mr-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Maintain consistency across complex narratives
-                            </li>
-                        </ul>
+                        <a href="features.html" class="text-accent hover:text-accent/80 font-semibold transition-colors duration-200">Explore timeline features →</a>
                     </div>
-                    <div class="order-1 md:order-2 bg-gray-100 rounded-xl p-6 shadow-md">
-                        <!-- Placeholder for Smart Editor Screenshot -->
-                        <div class="w-full h-80 bg-white rounded-lg border border-gray-200 flex flex-col relative">
-                            <!-- Editor toolbar -->
-                            <div class="bg-primary p-3 flex items-center">
-                                <div class="flex space-x-2">
-                                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                                </div>
-                                <div class="text-white text-xs ml-4">Smart Editor</div>
-                            </div>
-
-                            <!-- Editor content -->
-                            <div class="flex-1 p-4 flex items-center justify-center">
-                                <span class="text-gray-400">Smart Editor Screenshot</span>
-                            </div>
+                    <div>
+                        <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
+                            <img src="public/index/timelines.png" alt="PlotPanda Timeline Feature" class="w-full h-auto object-cover">
                         </div>
                     </div>
                 </div>
             </div>
 
-
-
-            <!-- Secondary Features - Bold & Modern -->
-            <div class="mt-12 mb-12">
-                <div class="flex flex-col items-center text-center">
-                    <h2 class="text-4xl font-bold text-primary mb-8">A Writing Space That <span class="relative inline-block">
-                        <span class="relative z-10">Works With You</span>
-                        <span class="absolute -bottom-1 left-0 w-full h-3 bg-accentLight -z-10"></span>
-                    </span></h2>
+            <!-- Feature 2: Smart Editor -->
+            <div class="mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
+                            <img src="public/index/editor-with-entities.png" alt="PlotPanda Smart Editor with Entity Tagging" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-4">Rich context while you <em class="text-accent not-italic">write</em></h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Characters and world elements from your plot cards automatically appear alongside your writing. See relevant character details, relationships, and world-building without breaking your creative flow.
+                        </p>
+                        <a href="features.html" class="text-accent hover:text-accent/80 font-semibold transition-colors duration-200">See contextual writing →</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 3: Mind Mapping -->
+            <div class="mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-4">See how ideas <em class="text-accent not-italic">connect</em></h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Map the relationships between characters, plot threads, and themes visually. Discover new story directions and ensure important connections don't get lost in the complexity of your narrative.
+                        </p>
+                        <a href="features.html" class="text-accent hover:text-accent/80 font-semibold transition-colors duration-200">Explore mind mapping →</a>
+                    </div>
+                    <div>
+                        <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
+                            <img src="public/index/mindmap.png" alt="PlotPanda Mind Map Feature" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Secondary feature cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-8 border border-gray-100 hover:border-accent">
-                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                        <i class="fas fa-chart-line text-accent text-xl"></i>
+            <!-- Feature 4: Story Bible (Elements) -->
+            <div class="mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
+                            <img src="public/index/characters.png" alt="PlotPanda Custom Entity Categories" class="w-full h-auto object-cover">
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-primary hover:text-accent transition-all">Track Your Progress, Hit Your Goals</h3>
-                    <p class="text-gray-600">Watch your story grow day by day. Set word count targets, track writing streaks, and visualize your progress with intuitive charts that keep you motivated.</p>
+                    <div class="order-1 lg:order-2">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-4">Build worlds worth <em class="text-accent not-italic">exploring</em></h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Create your own entity categories—characters, locations, magic systems, cultures—then organize the details within each. Your custom worldbuilding structure adapts to any genre or story complexity.
+                        </p>
+                        <a href="features.html" class="text-accent hover:text-accent/80 font-semibold transition-colors duration-200">See story elements →</a>
+                    </div>
                 </div>
+            </div>
 
-                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-8 border border-gray-100 hover:border-accent">
-                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                        <i class="fas fa-paint-brush text-accent text-xl"></i>
+            <!-- Feature 5: Progress Tracking -->
+            <div class="mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-4">Track your progress, hit your <em class="text-accent not-italic">goals</em></h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Watch your story grow day by day. Set word count targets, track writing streaks, and visualize your progress with intuitive charts that keep you motivated from first draft to final chapter.
+                        </p>
+                        <a href="features.html" class="text-accent hover:text-accent/80 font-semibold transition-colors duration-200">See progress tracking →</a>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-primary hover:text-accent transition-all">Make It Look & Feel Right</h3>
-                    <p class="text-gray-600">Customize your writing environment with 8 distinct themes. Choose light or dark mode, adjust typography, and create a space that inspires your best writing.</p>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-8 border border-gray-100 hover:border-accent">
-                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                        <i class="fas fa-folder-open text-accent text-xl"></i>
+                    <div>
+                        <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
+                            <img src="public/index/progress-tracker.png" alt="PlotPanda Progress Tracking Features" class="w-full h-auto object-cover">
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-primary hover:text-accent transition-all">Organize Multiple Projects & Stories</h3>
-                    <p class="text-gray-600">Keep everything in perfect order. Manage multiple books, series, and short stories with a clean hierarchy that makes navigation effortless.</p>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+
 
     <!-- Testimonials Section -->
-    <div class="bg-paper py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <div class="flex flex-col items-center text-center">
-                    <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-4 shadow-sm">TESTIMONIALS</span>
-                    <h2 class="text-4xl font-bold text-primary mb-6">What Writers Are Saying</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join thousands of writers who've discovered a more intuitive way to bring their stories to life.</p>
-                </div>
+    <div class="bg-gray-50 py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Writers love PlotPanda's <em class="text-accent not-italic">connected</em> approach</h2>
+                <p class="text-xl text-gray-600 font-light max-w-3xl mx-auto">Real feedback from authors using PlotPanda to craft their stories</p>
             </div>
 
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-md p-8 border border-gray-100 relative">
-                    <div class="absolute -top-3 -left-3 text-accent">
-                        <i class="fas fa-quote-left text-3xl"></i>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative">
+                    <div class="absolute top-6 right-6 text-accent/20">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                        </svg>
                     </div>
-                    <div class="pt-4">
-                        <p class="italic text-gray-600 mb-6">"PlotPanda has completely transformed my writing process. The timeline feature makes organizing my story so much easier, and I can finally see how all my plot threads connect!"</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
-                            <div>
-                                <p class="font-semibold text-primary">Sarah J.</p>
-                                <p class="text-sm text-gray-500">Fantasy Author</p>
-                            </div>
+                    <blockquote class="mb-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            "The timeline view changed everything for me. I can finally see my entire story structure at a glance and catch pacing issues before my readers do."
+                        </p>
+                    </blockquote>
+                    <footer class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-accent font-bold text-lg">E</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-md p-8 border border-gray-100 relative">
-                    <div class="absolute -top-3 -left-3 text-accent">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <div class="pt-4">
-                        <p class="italic text-gray-600 mb-6">"The world-building tools are incredible. I can keep track of all my characters, locations, and lore in one place, and it's all connected to my manuscript. Game changer!"</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
-                            <div>
-                                <p class="font-semibold text-primary">Mark T.</p>
-                                <p class="text-sm text-gray-500">Sci-Fi Novelist</p>
-                            </div>
+                        <div>
+                            <p class="font-semibold text-primary">Elena Rodriguez</p>
+                            <p class="text-gray-500 text-sm">Historical Fiction Author</p>
                         </div>
-                    </div>
+                    </footer>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-md p-8 border border-gray-100 relative">
-                    <div class="absolute -top-3 -left-3 text-accent">
-                        <i class="fas fa-quote-left text-3xl"></i>
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative">
+                    <div class="absolute top-6 right-6 text-accent/20">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                        </svg>
                     </div>
-                    <div class="pt-4">
-                        <p class="italic text-gray-600 mb-6">"I love how the mind mapping feature helps me discover connections in my story I hadn't even thought of. It's like having a creative partner who helps me see new possibilities."</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
-                            <div>
-                                <p class="font-semibold text-primary">Jessica R.</p>
-                                <p class="text-sm text-gray-500">Mystery Writer</p>
-                            </div>
+                    <blockquote class="mb-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            "Having character details automatically appear while writing is a game-changer. No more hunting through notes to remember backstory details."
+                        </p>
+                    </blockquote>
+                    <footer class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-accent font-bold text-lg">J</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Team Section -->
-    <div class="bg-white py-24 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-4 shadow-sm">OUR TEAM</span>
-                    <h2 class="text-4xl font-bold text-primary mb-6">We're a small team who built PlotPanda with a lot of love</h2>
-                    <p class="text-lg text-gray-600 mb-6">
-                        We're writers and developers passionate about storytelling.
-                    </p>
-                    <p class="text-lg text-gray-600 mb-8">
-                        Join our Discord to connect directly with us, share your experiences, and help shape the future of PlotPanda together.
-                    </p>
-                    <a href="https://discord.gg/NdzBPYG5" target="_blank" class="btn btn-primary inline-flex items-center gap-2">
-                        <i class="fab fa-discord text-xl"></i>
-                        Join our Discord Community
-                    </a>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-8 shadow-md border border-gray-100">
-                    <div class="flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="flex justify-center mb-6">
-                                <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
-                                    <i class="fas fa-users text-accent text-2xl"></i>
-                                </div>
-                            </div>
-                            <h3 class="text-xl font-bold text-primary mb-4">Community-Driven Development</h3>
-                            <p class="text-gray-600">
-                                Your feedback directly shapes our roadmap. Join our growing community of writers and storytellers to help us build the perfect tool for your creative process.
-                            </p>
-                            <div class="mt-8 flex justify-center">
-                                <div class="flex -space-x-2">
-                                    <div class="w-10 h-10 rounded-full bg-gray-200 border-2 border-white"></div>
-                                    <div class="w-10 h-10 rounded-full bg-gray-300 border-2 border-white"></div>
-                                    <div class="w-10 h-10 rounded-full bg-gray-400 border-2 border-white"></div>
-                                    <div class="w-10 h-10 rounded-full bg-gray-500 border-2 border-white flex items-center justify-center text-white text-xs font-bold">+42</div>
-                                </div>
-                            </div>
+                        <div>
+                            <p class="font-semibold text-primary">James Park</p>
+                            <p class="text-gray-500 text-sm">Mystery Writer</p>
                         </div>
+                    </footer>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative">
+                    <div class="absolute top-6 right-6 text-accent/20">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                        </svg>
                     </div>
+                    <blockquote class="mb-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            "As a series writer, PlotPanda makes it effortless to maintain consistency and track character development across my entire universe."
+                        </p>
+                    </blockquote>
+                    <footer class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-accent font-bold text-lg">M</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-primary">Maya Chen</p>
+                            <p class="text-gray-500 text-sm">Fantasy Series Author</p>
+                        </div>
+                    </footer>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- One Platform Section -->
-    <div class="bg-white py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <div class="mb-16">
-                <div class="flex flex-col items-center text-center">
-                    <span class="inline-block bg-accentLight text-accentDark text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-4 shadow-sm">COMPLETE SOLUTION</span>
-                    <h2 class="text-4xl font-bold text-primary mb-6">One Platform for Your Entire Creative Process</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">From initial concept to final draft, PlotPanda provides all the tools you need in one seamless experience.</p>
-                </div>
-            </div>
 
-            <!-- Platform visual -->
-            <div class="relative bg-gray-100 rounded-xl p-10 flex items-center justify-center mb-20">
-                <div class="w-full h-64 flex items-center justify-center">
-                    <span class="text-gray-400">Platform Visual Placeholder</span>
-                </div>
-            </div>
         </div>
     </div>
 
     <!-- Final CTA Section -->
-    <div class="bg-paper py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <div class="relative bg-gradient-to-br from-primary/5 to-white rounded-3xl overflow-hidden shadow-xl p-12 md:p-16">
-                <!-- Accent top border with softer color -->
-                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-accentLight to-accent"></div>
+    <div class="bg-gradient-to-br from-primary to-primary/90 py-20 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 20px 20px;"></div>
+        </div>
 
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-12">
-                        <span class="inline-block bg-accent text-white text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wide mb-6 shadow-sm">GET STARTED</span>
-                        <h2 class="text-4xl md:text-5xl font-black text-primary mb-6">Ready to Transform Your Writing Experience?</h2>
-                        <p class="text-xl text-gray-600 mx-auto max-w-2xl">
-                            Join thousands of writers who've discovered a more intuitive way to bring their stories to life.
+        <!-- Floating Elements -->
+        <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-accent/20 rounded-full blur-lg"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+                    Start Writing Your<br>
+                    <span class="text-accent">Best Story Today</span>
+                </h2>
+
+                <p class="text-xl md:text-2xl text-white/80 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
+                    Everything you need to plan, write, and perfect your story—all in one powerful platform.
+                </p>
+            </div>
+
+            <!-- CTA Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Primary CTA -->
+                <div class="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 relative overflow-hidden group hover:shadow-3xl transition-all duration-300">
+                    <div class="absolute top-0 right-0 bg-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        MOST POPULAR
+                    </div>
+
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Start Free Trial</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Get full access to all features. Pricing details coming soon.
+                        </p>
+
+                        <a href="https://cognito-abn.pages.dev/" class="group relative bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg inline-flex items-center justify-center w-full mb-4">
+                            <span class="relative z-10 text-lg">Try PlotPanda Free</span>
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+
+                        <div class="flex items-center justify-center space-x-4 text-sm text-gray-500">
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Free trial
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Pricing TBD
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary CTA -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-white">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-4">Join Our Community</h3>
+                        <p class="text-white/80 mb-6 leading-relaxed">
+                            Connect with fellow writers, get updates, and share your writing journey.
+                        </p>
+
+                        <a href="https://discord.gg/plotpanda" class="group bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 inline-flex items-center justify-center w-full mb-4">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                            <span class="text-lg">Join Discord</span>
+                        </a>
+
+                        <p class="text-sm text-white/60">
+                            Free community • Get updates & support
                         </p>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Feature boxes -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                        <div class="bg-white shadow-md rounded-xl p-6 border border-gray-100">
-                            <div class="text-accentDark mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <h3 class="font-bold text-primary text-lg mb-2">Start Today</h3>
-                            <p class="text-gray-600 text-sm">Free 30-day trial with full access to all features</p>
+            <!-- Trust Indicators -->
+            <div class="text-center mt-16">
+                <p class="text-white/60 text-sm mb-6">Trusted by writers worldwide</p>
+                <div class="flex items-center justify-center space-x-8 opacity-60">
+                    <div class="flex items-center space-x-1">
+                        <div class="flex">
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                            </svg>
                         </div>
-
-                        <div class="bg-white shadow-md rounded-xl p-6 border border-gray-100">
-                            <div class="text-accentDark mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                                </svg>
-                            </div>
-                            <h3 class="font-bold text-primary text-lg mb-2">Cloud Sync</h3>
-                            <p class="text-gray-600 text-sm">Access your work anywhere, anytime</p>
-                        </div>
-
-                        <div class="bg-white shadow-md rounded-xl p-6 border border-gray-100">
-                            <div class="text-accentDark mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <h3 class="font-bold text-primary text-lg mb-2">Boost Creativity</h3>
-                            <p class="text-gray-600 text-sm">Discover new possibilities in your stories</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <a href="https://cognito-abn.pages.dev/" class="btn btn-primary py-4 px-8 text-lg font-bold">
-                            Start Your Free Trial
-                        </a>
-                        <p class="text-gray-500 text-sm">No credit card required. Full access for 30 days.</p>
+                        <span class="text-white/80 text-sm ml-2">Loved by early users</span>
                     </div>
                 </div>
             </div>
