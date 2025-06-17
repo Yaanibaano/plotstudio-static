@@ -1,48 +1,51 @@
-// Main JavaScript for StoryForge Pro marketing website
+// Main JavaScript for Meta Author marketing website
 
 document.addEventListener('DOMContentLoaded', () => {
   // Animate hero text elements
   animateHeroText();
-  
+
   // Mobile menu toggle
-  const mobileMenuButton = document.querySelector('.md\\:hidden button');
-  const mobileMenu = document.createElement('div');
-  
-  if (mobileMenuButton) {
-    mobileMenu.className = 'mobile-menu';
-    mobileMenu.innerHTML = `
-      <div class="p-10 h-full flex flex-col">
-        <div class="flex justify-between items-center mb-12">
-          <span class="text-2xl font-bold text-primary">StoryForge<span class="text-accent">Pro</span></span>
-          <button id="close-mobile-menu" class="text-primary p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <nav class="flex flex-col space-y-8 text-xl">
-          <a href="index.html" class="text-primary font-bold">Home</a>
-          <a href="features.html" class="text-gray-600 hover:text-primary font-medium">Features</a>
-          <a href="pricing.html" class="text-gray-600 hover:text-primary font-medium">Pricing</a>
-          <a href="about.html" class="text-gray-600 hover:text-primary font-medium">About</a>
-        </nav>
-        <div class="mt-auto pt-8 flex flex-col space-y-5">
-          <a href="#" class="text-primary hover:text-accent font-bold">Log in</a>
-          <a href="#" class="bg-accent hover:bg-opacity-90 text-white py-4 px-6 rounded-xl text-center font-bold shadow-lg shadow-accent/20">Start Writing</a>
-        </div>
-      </div>
-    `;
-    
-    document.body.appendChild(mobileMenu);
-    
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+
+  if (mobileMenuButton && mobileMenu && mobileMenuPanel) {
+    // Open mobile menu
     mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.add('open');
+      mobileMenu.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
+      // Trigger animation after element is visible
+      setTimeout(() => {
+        mobileMenuPanel.style.transform = 'translateX(0)';
+      }, 10);
     });
-    
-    document.getElementById('close-mobile-menu').addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
+
+    // Close mobile menu function
+    const closeMobileMenu = () => {
+      mobileMenuPanel.style.transform = 'translateX(100%)';
       document.body.style.overflow = '';
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
+    };
+
+    // Close button
+    if (mobileMenuClose) {
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+    }
+
+    // Backdrop click
+    if (mobileMenuBackdrop) {
+      mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        closeMobileMenu();
+      }
     });
   }
 

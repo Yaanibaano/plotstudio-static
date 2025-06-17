@@ -28,36 +28,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2c1810',
-                        secondary: '#6b5b4f',
-                        accent: '#c49b61',
-                        light: '#f7f3ed',
-                        paper: '#fefcf9',
-                        warm: '#faf7f2',
-                        cream: '#f5f1ea',
-                        gold: '#d4a574',
-                        brown: '#8b7355',
+                        primary: '#1a1a1a',
+                        secondary: '#2d2d2d',
+                        accent: '#8b5a3c',
+                        sage: '#6b8e6b',
+                        warm: '#fefcf9',
+                        cream: '#f8f6f3',
+                        parchment: '#f5f3f0',
+                        ink: '#1a1a1a',
+                        paper: '#ffffff',
+                        muted: '#8a8a8a',
+                        literary: {
+                            50: '#fefcf9',
+                            100: '#f8f6f3',
+                            200: '#f0ede8',
+                            300: '#e8e3dc',
+                            400: '#d4c4b0',
+                            500: '#c4a484',
+                            600: '#8b5a3c',
+                            700: '#6d4530',
+                            800: '#4f3024',
+                            900: '#3a2419'
+                        },
+                        sage: {
+                            50: '#f7f9f7',
+                            100: '#e8f0e8',
+                            200: '#d1e1d1',
+                            300: '#a8c8a8',
+                            400: '#7fa07f',
+                            500: '#6b8e6b',
+                            600: '#5a7a5a',
+                            700: '#4a654a',
+                            800: '#3a503a',
+                            900: '#2a3b2a'
+                        },
                         gray: {
-                            50: '#faf7f2',
-                            100: '#f7f3ed',
-                            200: '#e8ddd0',
-                            300: '#d4c4b0',
-                            400: '#a89680',
-                            500: '#8b7355',
-                            600: '#6b5b4f',
-                            700: '#4a3f36',
-                            800: '#2c1810',
-                            900: '#1a0f08'
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717'
                         }
                     },
                     fontFamily: {
                         'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Crimson Text', 'serif'],
+                        'display': ['Playfair Display', 'serif'],
+                    },
+                    screens: {
+                        'xs': '475px',
+                    },
+                    boxShadow: {
+                        'soft': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+                        'medium': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'large': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'literary': '0 4px 14px 0 rgba(139, 90, 60, 0.15)',
                     },
                 }
             }
@@ -65,30 +101,53 @@
     </script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-paper font-sans">
+<body class="bg-warm font-sans text-primary antialiased">
     <div class="relative overflow-hidden">
         <!-- Navigation -->
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6">
-            <header class="flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="flex justify-between items-center py-4 lg:py-6">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center group">
-                        <span class="text-2xl font-bold">
-                            <span class="text-primary">Meta</span>
-                            <span class="text-accent">Author</span>
-                        </span>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center shadow-soft">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                </svg>
+                            </div>
+                            <span class="text-xl sm:text-2xl font-display font-semibold">
+                                <span class="text-primary">Meta</span>
+                                <span class="text-accent">Author</span>
+                            </span>
+                        </div>
                     </a>
                 </div>
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="features.html" class="text-gray-600 hover:text-primary transition-colors duration-200 font-medium">Features</a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="features.html" class="text-gray-600 hover:text-primary transition-colors duration-200 font-medium relative group">
+                        Features
+                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-accent transition-all duration-200"></span>
+                    </a>
                     <a href="#" class="text-gray-400 cursor-not-allowed font-medium" title="Coming Soon">Pricing</a>
                     <a href="#" class="text-gray-400 cursor-not-allowed font-medium" title="Coming Soon">Blog</a>
                 </nav>
-                <div class="flex items-center space-x-4">
+
+                <!-- Desktop CTA -->
+                <div class="hidden lg:flex items-center space-x-4">
                     <a href="https://cognito-abn.pages.dev/" class="text-gray-600 hover:text-primary transition-colors duration-200 font-medium">Log in</a>
-                    <a href="https://cognito-abn.pages.dev/" class="bg-accent hover:bg-accent/90 text-white px-6 py-2.5 rounded-lg transition-all duration-200 font-medium shadow-md hover:shadow-lg">Start Writing</a>
+                    <a href="https://cognito-abn.pages.dev/" class="group relative bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-200 shadow-soft hover:shadow-medium transform hover:-translate-y-0.5">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.71,4.63L19.37,3.29C19,2.9 18.35,2.9 17.96,3.29L9,12.25L11.75,15L20.71,6.04C21.1,5.65 21.1,5 20.71,4.63M7,14A3,3 0 0,0 4,17C4,18.31 2.84,19 2,19C2.92,20.22 4.5,21 6,21A4,4 0 0,0 10,17A3,3 0 0,0 7,14Z"/>
+                            </svg>
+                            Start Writing
+                        </span>
+                    </a>
                 </div>
-                <div class="md:hidden">
-                    <button class="text-primary p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-primary p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200" aria-label="Open mobile menu">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -97,36 +156,96 @@
             </header>
         </div>
 
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-50 lg:hidden hidden">
+            <div class="fixed inset-0 bg-black bg-opacity-50" id="mobile-menu-backdrop"></div>
+            <div class="fixed top-0 right-0 w-full max-w-sm h-full bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu-panel">
+                <div class="flex flex-col h-full">
+                    <!-- Mobile Menu Header -->
+                    <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 bg-gradient-to-br from-accent to-literary-600 rounded-md flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                </svg>
+                            </div>
+                            <span class="text-lg font-display font-bold">
+                                <span class="text-primary">Meta</span>
+                                <span class="text-accent">Author</span>
+                            </span>
+                        </div>
+                        <button id="mobile-menu-close" class="text-gray-400 hover:text-gray-600 p-2" aria-label="Close mobile menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Content -->
+                    <div class="flex-1 px-4 py-6 space-y-6">
+                        <nav class="space-y-4">
+                            <a href="features.html" class="block text-gray-900 hover:text-accent font-medium py-2 transition-colors duration-200">Features</a>
+                            <a href="#" class="block text-gray-400 cursor-not-allowed font-medium py-2" title="Coming Soon">Pricing</a>
+                            <a href="#" class="block text-gray-400 cursor-not-allowed font-medium py-2" title="Coming Soon">Blog</a>
+                        </nav>
+
+                        <div class="pt-6 border-t border-gray-200 space-y-4">
+                            <a href="https://cognito-abn.pages.dev/" class="block text-gray-600 hover:text-primary font-medium py-2 transition-colors duration-200">Log in</a>
+                            <a href="https://cognito-abn.pages.dev/" class="group relative bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-200 shadow-soft hover:shadow-medium transform hover:-translate-y-0.5 text-center">
+                                <span class="flex items-center justify-center">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.71,4.63L19.37,3.29C19,2.9 18.35,2.9 17.96,3.29L9,12.25L11.75,15L20.71,6.04C21.1,5.65 21.1,5 20.71,4.63M7,14A3,3 0 0,0 4,17C4,18.31 2.84,19 2,19C2.92,20.22 4.5,21 6,21A4,4 0 0,0 10,17A3,3 0 0,0 7,14Z"/>
+                                    </svg>
+                                    Start Writing
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Hero Section -->
-        <div class="bg-paper py-20 md:py-32 relative overflow-hidden">
-            <!-- Background decorative elements -->
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute top-20 left-10 w-32 h-32 bg-accent/5 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-20 right-10 w-40 h-40 bg-accent/5 rounded-full blur-3xl"></div>
+        <div class="bg-gradient-to-b from-warm to-cream py-24 sm:py-32 lg:py-40 relative overflow-hidden">
+            <!-- Subtle background pattern -->
+            <div class="absolute inset-0 opacity-[0.02]">
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, #1a1a1a 1px, transparent 0); background-size: 24px 24px;"></div>
             </div>
 
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 text-center relative z-10">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <!-- Badge -->
-                <div class="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full text-sm font-medium text-gray-700 mb-8 shadow-sm">
-                    <span class="w-2 h-2 bg-accent rounded-full mr-2"></span>
-                    Complete Feature Overview
+                <div class="inline-flex items-center px-4 py-2 bg-paper border border-gray-200 rounded-full text-sm font-medium text-muted mb-8 shadow-soft">
+                    <div class="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                    <span>Complete Feature Overview</span>
                 </div>
 
                 <!-- Main Headline -->
-                <h1 class="text-5xl md:text-6xl font-black text-primary mb-8 leading-tight tracking-tight">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-semibold text-primary mb-6 leading-tight">
                     Every Tool You Need to
                     <span class="text-accent">Create Stories</span>
                 </h1>
 
                 <!-- Subheading -->
-                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-                    From visual timeline planning to rich chapter writing, comprehensive world building to progress tracking—discover how PlotPanda transforms your creative process.
+                <p class="text-lg sm:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    From visual timeline planning to rich chapter writing, comprehensive world building to progress tracking—
+                    discover how Meta Author transforms your creative process.
                 </p>
 
-                <!-- CTA -->
-                <div class="mb-16">
-                    <a href="https://cognito-abn.pages.dev/" class="group relative bg-accent hover:bg-accent/90 text-white font-bold px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg">
-                        <span class="relative z-10">Start Writing for Free</span>
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                    <a href="https://cognito-abn.pages.dev/" class="group relative bg-accent hover:bg-accent/90 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-soft hover:shadow-medium transform hover:-translate-y-0.5 w-full sm:w-auto">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.71,4.63L19.37,3.29C19,2.9 18.35,2.9 17.96,3.29L9,12.25L11.75,15L20.71,6.04C21.1,5.65 21.1,5 20.71,4.63M7,14A3,3 0 0,0 4,17C4,18.31 2.84,19 2,19C2.92,20.22 4.5,21 6,21A4,4 0 0,0 10,17A3,3 0 0,0 7,14Z"/>
+                            </svg>
+                            Start Writing for Free
+                        </span>
+                    </a>
+                    <a href="#features" class="group flex items-center justify-center space-x-2 text-gray-600 hover:text-accent font-medium px-8 py-4 transition-colors duration-200 w-full sm:w-auto border border-gray-200 rounded-xl hover:border-accent/30 hover:bg-white/50">
+                        <span>Explore Features</span>
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -134,366 +253,305 @@
     </div>
 
     <!-- Visual Timeline Planning Section -->
-    <div class="bg-white py-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div id="features" class="bg-paper py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <div class="inline-flex items-center px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-sm font-medium text-accent mb-8">
+                <div class="inline-flex items-center px-4 py-2 bg-accent/10 rounded-full text-sm font-medium text-accent mb-8">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
                     Timeline Planning
                 </div>
-                <h2 class="text-4xl md:text-6xl font-black text-primary mb-8 leading-tight">Visual Timeline Planning</h2>
+                <h2 class="text-3xl sm:text-4xl font-display font-semibold text-primary mb-6 leading-tight">Visual Timeline Planning</h2>
 
                 <!-- Description -->
-                <div class="max-w-3xl mx-auto mb-20">
-                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <div class="max-w-3xl mx-auto mb-12">
+                    <p class="text-lg text-gray-600 leading-relaxed">
                         Transform your story ideas into a visual masterpiece with our intuitive drag-and-drop timeline system. See your entire story structure at a glance and organize scenes with customizable plot cards.
                     </p>
                 </div>
 
                 <!-- Feature Image -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-lg max-w-5xl mx-auto">
+                <div class="bg-paper rounded-xl overflow-hidden border border-gray-200 shadow-soft">
                     <img src="public/index/timelines.png" alt="Visual Timeline Planning" class="w-full h-auto object-cover">
                 </div>
             </div>
 
             <!-- Key Capabilities Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Plot Cards</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Visually organize your story with customizable cards to track scenes, character moments, conflicts, and key plot points</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Plot Cards</h3>
+                    <p class="text-gray-600 leading-relaxed">Visually organize your story with customizable cards to track scenes, character moments, conflicts, and key plot points</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-sage-50/30 rounded-2xl border border-literary-200 hover:border-sage/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-sage/20 group-hover:to-sage/30 transition-all duration-300">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Plot Lines</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Set up your main storyline alongside subplots, character arcs, and thematic elements to visualize your complete narrative structure</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-sage transition-colors duration-300">Plot Lines</h3>
+                    <p class="text-gray-600 leading-relaxed">Set up your main storyline alongside subplots, character arcs, and thematic elements to visualize your complete narrative structure</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Chapter Organization</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Structure your story in chapters, acts, or custom divisions that work for your writing style</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Chapter Organization</h3>
+                    <p class="text-gray-600 leading-relaxed">Structure your story in chapters, acts, or custom divisions that work for your writing style</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-sage-50/30 rounded-2xl border border-literary-200 hover:border-sage/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-sage/20 group-hover:to-sage/30 transition-all duration-300">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Smart Filtering</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Easily view specific plot lines, character arcs, or story elements with powerful filtering and view options</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-sage transition-colors duration-300">Smart Filtering</h3>
+                    <p class="text-gray-600 leading-relaxed">Easily view specific plot lines, character arcs, or story elements with powerful filtering and view options</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 5l2 2"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Template Integration</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Apply proven story structures like Hero's Journey, Three-Act Structure, and more to jumpstart your plotting</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Template Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">Apply proven story structures like Hero's Journey, Three-Act Structure, and more to jumpstart your plotting</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Rich Chapter Writing Section -->
-    <div class="bg-gray-50 py-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="bg-cream py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <div class="inline-flex items-center px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-sm font-medium text-accent mb-8">
+                <div class="inline-flex items-center px-4 py-2 bg-sage/10 rounded-full text-sm font-medium text-sage mb-8">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                     </svg>
                     Chapter Writing
                 </div>
-                <h2 class="text-4xl md:text-6xl font-black text-primary mb-8 leading-tight">Rich Chapter Writing</h2>
+                <h2 class="text-3xl sm:text-4xl font-display font-semibold text-primary mb-6 leading-tight">Rich Chapter Writing</h2>
 
                 <!-- Description -->
-                <div class="max-w-3xl mx-auto mb-20">
-                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <div class="max-w-3xl mx-auto mb-12">
+                    <p class="text-lg text-gray-600 leading-relaxed">
                         Write with our distraction-free markdown editor that automatically displays character and world-building details as you type, keeping you immersed in your story world.
                     </p>
                 </div>
 
                 <!-- Feature Image -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-lg max-w-5xl mx-auto">
+                <div class="bg-paper rounded-xl overflow-hidden border border-gray-200 shadow-soft">
                     <img src="public/index/editor-with-entities.png" alt="Rich Chapter Writing" class="w-full h-auto object-cover">
                 </div>
             </div>
 
             <!-- Key Capabilities Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-sage-50/30 rounded-2xl border border-literary-200 hover:border-sage/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-sage/20 group-hover:to-sage/30 transition-all duration-300">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Advanced Text Editor</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Write with a feature-rich editor that supports formatting, comments, and collaborative editing</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-sage transition-colors duration-300">Markdown Editor</h3>
+                    <p class="text-gray-600 leading-relaxed">Write with simple markdown syntax for clean formatting and distraction-free composition</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Chapter Management</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Organize your manuscript into chapters with easy navigation and restructuring</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Chapter Management</h3>
+                    <p class="text-gray-600 leading-relaxed">Organize your manuscript into chapters with easy navigation and restructuring</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 5l2 2"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Markdown Editor</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Write with simple markdown syntax for clean formatting and distraction-free composition</p>
-                </div>
-
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-sage-50/30 rounded-2xl border border-literary-200 hover:border-sage/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-sage/20 group-hover:to-sage/30 transition-all duration-300">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Plot Cards Integration</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Reference your plot cards and story structure directly while writing for seamless story development</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-sage transition-colors duration-300">Plot Cards Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">Reference your plot cards and story structure directly while writing for seamless story development</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Entity Relations</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">See character and world-building details automatically displayed as you write for rich context</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Entity Relations</h3>
+                    <p class="text-gray-600 leading-relaxed">See character and world-building details automatically displayed as you write for rich context</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Comprehensive World Building Section -->
-    <div class="bg-white py-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="bg-paper py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <div class="inline-flex items-center px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-sm font-medium text-accent mb-8">
+                <div class="inline-flex items-center px-4 py-2 bg-accent/10 rounded-full text-sm font-medium text-accent mb-8">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                     </svg>
                     World Building
                 </div>
-                <h2 class="text-4xl md:text-6xl font-black text-primary mb-8 leading-tight">Comprehensive World Building</h2>
+                <h2 class="text-3xl sm:text-4xl font-display font-semibold text-primary mb-6 leading-tight">Comprehensive World Building</h2>
 
                 <!-- Description -->
-                <div class="max-w-3xl mx-auto mb-20">
-                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <div class="max-w-3xl mx-auto mb-12">
+                    <p class="text-lg text-gray-600 leading-relaxed">
                         Create detailed story bibles with flexible entity templates. Track characters, locations, cultures, and any story element with smart organization that keeps your universe details perfectly accessible.
                     </p>
                 </div>
 
                 <!-- Feature Image -->
-                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-lg max-w-5xl mx-auto">
+                <div class="bg-paper rounded-xl overflow-hidden border border-gray-200 shadow-soft">
                     <img src="public/index/characters.png" alt="Comprehensive World Building" class="w-full h-auto object-cover">
                 </div>
             </div>
 
             <!-- Key Capabilities Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Custom Entities</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Create detailed profiles for characters, locations, objects, cultures, or any story element</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Custom Entities</h3>
+                    <p class="text-gray-600 leading-relaxed">Create detailed profiles for characters, locations, objects, cultures, or any story element</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-sage-50/30 rounded-2xl border border-literary-200 hover:border-sage/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-sage/20 group-hover:to-sage/30 transition-all duration-300">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Flexible Templates</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Use pre-built templates or create your own custom templates for different entity types</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-sage transition-colors duration-300">Flexible Templates</h3>
+                    <p class="text-gray-600 leading-relaxed">Use pre-built templates or create your own custom templates for different entity types</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Rich Profiles</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Add descriptions, custom attributes, and detailed notes to every entity</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Rich Profiles</h3>
+                    <p class="text-gray-600 leading-relaxed">Add descriptions, custom attributes, and detailed notes to every entity</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-sage-50/30 rounded-2xl border border-literary-200 hover:border-sage/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-sage/20 group-hover:to-sage/30 transition-all duration-300">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Smart Organization</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Categorize and organize your world-building elements with tags and custom categories</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-sage transition-colors duration-300">Smart Organization</h3>
+                    <p class="text-gray-600 leading-relaxed">Categorize and organize your world-building elements with tags and custom categories</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Template Sync</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Update entity fields automatically when templates are modified</p>
-                </div>
-
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Search & Filter</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Quickly find any entity with powerful search and filtering capabilities</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Search & Filter</h3>
+                    <p class="text-gray-600 leading-relaxed">Quickly find any entity with powerful search and filtering capabilities</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-sage-50/30 rounded-2xl border border-literary-200 hover:border-sage/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-sage/20 group-hover:to-sage/30 transition-all duration-300">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Project Integration</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Seamlessly integrate world-building elements with your timeline and writing</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-sage transition-colors duration-300">Project Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">Seamlessly integrate world-building elements with your timeline and writing</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Progress Tracking & Analytics Section -->
-    <div class="bg-gray-50 py-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="bg-cream py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <div class="inline-flex items-center px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-sm font-medium text-accent mb-8">
+                <div class="inline-flex items-center px-4 py-2 bg-accent/10 rounded-full text-sm font-medium text-accent mb-8">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                     </svg>
                     Progress Tracking
                 </div>
-                <h2 class="text-4xl md:text-6xl font-black text-primary mb-8 leading-tight">Progress Tracking & Analytics</h2>
+                <h2 class="text-3xl sm:text-4xl font-display font-semibold text-primary mb-6 leading-tight">Progress Tracking & Analytics</h2>
 
                 <!-- Description -->
-                <div class="max-w-3xl mx-auto mb-20">
-                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <div class="max-w-3xl mx-auto mb-12">
+                    <p class="text-lg text-gray-600 leading-relaxed">
                         Stay motivated with comprehensive tracking tools that monitor your writing sessions, streaks, and goals. Visualize your progress and celebrate every milestone on your writing journey.
                     </p>
                 </div>
 
                 <!-- Feature Image -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-lg max-w-5xl mx-auto">
+                <div class="bg-paper rounded-xl overflow-hidden border border-gray-200 shadow-soft">
                     <img src="public/index/progress-tracker.png" alt="Progress Tracking & Analytics" class="w-full h-auto object-cover">
                 </div>
             </div>
 
             <!-- Key Capabilities Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Writing Goals</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Set daily, weekly, or project-based word count targets and track your progress</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Writing Goals</h3>
+                    <p class="text-gray-600 leading-relaxed">Set daily, weekly, or project-based word count targets and track your progress</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Session Tracking</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Monitor your writing sessions with detailed time and word count analytics</p>
-                </div>
-
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-sage-50/30 rounded-2xl border border-literary-200 hover:border-sage/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-sage/20 group-hover:to-sage/30 transition-all duration-300">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Writing Streaks</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Build momentum with streak tracking that celebrates consistent writing habits</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-sage transition-colors duration-300">Writing Streaks</h3>
+                    <p class="text-gray-600 leading-relaxed">Build momentum with streak tracking that celebrates consistent writing habits</p>
                 </div>
 
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Activity Heatmaps</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Visualize your writing patterns and identify your most productive times</p>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Progress Charts</h3>
+                    <p class="text-gray-600 leading-relaxed">Visualize your writing journey with beautiful charts and progress indicators</p>
                 </div>
-
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Goal Management</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Create, edit, and complete multiple goals with deadline tracking</p>
-                </div>
-
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Progress Insights</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Get detailed statistics about your writing productivity and habits</p>
-                </div>
-
-                <div class="text-center p-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-primary mb-3">Persistent Timer</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Keep track of active writing sessions across all pages with a floating timer</p>
-                </div>
-
 
             </div>
         </div>
@@ -502,202 +560,132 @@
 
 
     <!-- Additional Features Section -->
-    <div class="bg-white py-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="bg-paper py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">Additional Features You'll Love</h2>
-                <p class="text-xl text-gray-600 font-light max-w-3xl mx-auto">Powerful tools that enhance your writing experience</p>
+                <h2 class="text-3xl sm:text-4xl font-display font-semibold text-primary mb-6">Additional Features You'll Love</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Powerful tools that enhance your writing experience</p>
             </div>
 
             <!-- Features Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="text-center p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-4">Mind Mapping</h3>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Mind Mapping</h3>
                     <p class="text-gray-600 leading-relaxed">Visualize story concepts and character relationships with integrated mind mapping tools for better story planning</p>
                 </div>
 
-                <div class="text-center p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-sage-50/30 rounded-2xl border border-literary-200 hover:border-sage/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage/10 to-sage/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-sage/20 group-hover:to-sage/30 transition-all duration-300">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-4">Multi-Project Management</h3>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-sage transition-colors duration-300">Multi-Project Management</h3>
                     <p class="text-gray-600 leading-relaxed">Organize multiple writing projects with workspace-level organization and easy project switching</p>
                 </div>
 
-                <div class="text-center p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/30 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div class="group text-center p-8 bg-gradient-to-br from-white to-literary-50/30 rounded-2xl border border-literary-200 hover:border-accent/30 hover:shadow-large transition-all duration-300 transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent/10 to-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-accent/20 group-hover:to-accent/30 transition-all duration-300">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-4">Cloud Sync</h3>
+                    <h3 class="text-xl font-display font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">Cloud Sync</h3>
                     <p class="text-gray-600 leading-relaxed">Your work is synchronized across all your devices for seamless writing anywhere</p>
                 </div>
-
-
             </div>
         </div>
     </div>
 
-    <!-- CTA Section -->
-    <div class="bg-gradient-to-br from-primary to-primary/90 py-20 relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 20px 20px;"></div>
-        </div>
+    <!-- Final CTA Section -->
+    <div class="bg-primary py-16 sm:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-display font-semibold text-white mb-6 leading-tight">
+                Start Writing Your<br>
+                <span class="text-accent">Best Story Today</span>
+            </h2>
 
-        <!-- Floating Elements -->
-        <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
-        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-accent/20 rounded-full blur-lg"></div>
+            <p class="text-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Everything you need to plan, write, and perfect your story—all in one clean, focused platform.
+            </p>
 
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 relative z-10">
-            <div class="text-center mb-16">
-
-
-                <h2 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
-                    Start Writing Your<br>
-                    <span class="text-accent">Best Story Today</span>
-                </h2>
-
-                <p class="text-xl md:text-2xl text-white/80 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
-                    Everything you need to plan, write, and perfect your story—all in one powerful platform.
-                </p>
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a href="https://cognito-abn.pages.dev/" class="group relative bg-accent hover:bg-accent/90 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-soft hover:shadow-medium transform hover:-translate-y-0.5 w-full sm:w-auto">
+                    <span class="flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.71,4.63L19.37,3.29C19,2.9 18.35,2.9 17.96,3.29L9,12.25L11.75,15L20.71,6.04C21.1,5.65 21.1,5 20.71,4.63M7,14A3,3 0 0,0 4,17C4,18.31 2.84,19 2,19C2.92,20.22 4.5,21 6,21A4,4 0 0,0 10,17A3,3 0 0,0 7,14Z"/>
+                        </svg>
+                        Start Writing for Free
+                    </span>
+                </a>
+                <a href="https://discord.gg/7ubGFdAE" class="group flex items-center justify-center space-x-2 text-white/80 hover:text-white font-medium px-8 py-4 transition-all duration-200 w-full sm:w-auto border border-white/20 rounded-xl hover:border-white/40 hover:bg-white/10">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                    <span>Join Discord</span>
+                </a>
             </div>
 
-            <!-- CTA Cards -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Primary CTA -->
-                <div class="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 relative overflow-hidden group hover:shadow-3xl transition-all duration-300">
-                    <div class="absolute top-0 right-0 bg-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                        MOST POPULAR
-                    </div>
-
-                    <div class="text-center">
-                        <h3 class="text-2xl font-bold text-primary mb-4">Start Free Trial</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Get full access to all features and start creating your story today.
-                        </p>
-
-                        <a href="https://cognito-abn.pages.dev/" class="group relative bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg inline-flex items-center justify-center w-full mb-4">
-                            <span class="relative z-10 text-lg">Start Writing for Free</span>
-                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Secondary CTA -->
-                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-white">
-                    <div class="text-center">
-                        <h3 class="text-2xl font-bold mb-4">Join Our Community</h3>
-                        <p class="text-white/80 mb-6 leading-relaxed">
-                            Connect with fellow writers, get updates, and share your writing journey.
-                        </p>
-
-                        <a href="https://discord.gg/7ubGFdAE" class="group bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 inline-flex items-center justify-center w-full mb-4">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-                            </svg>
-                            <span class="text-lg">Join Discord</span>
-                        </a>
-
-                        <p class="text-sm text-white/60">
-                            Free community • Get updates & support
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trust Indicators -->
-            <div class="text-center mt-16">
-                <p class="text-white/60 text-sm mb-6">Trusted by writers worldwide</p>
-                <div class="flex items-center justify-center space-x-8 opacity-60">
-                    <div class="flex items-center space-x-1">
-                        <div class="flex">
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                        </div>
-                        <span class="text-white/80 text-sm ml-2">Loved by early users</span>
-                    </div>
-                </div>
-            </div>
+            <p class="text-white/60 text-sm">
+                Free to start • No credit card required
+            </p>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-paper pt-24 pb-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
-                <div>
-                    <span class="text-2xl font-bold text-primary">Plot<span class="text-accent">Panda</span></span>
-                    <p class="mt-6 text-gray-600">The complete story creation suite for authors and storytellers.</p>
-                    <div class="flex space-x-5 mt-8">
-                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
+    <footer class="bg-cream pt-16 sm:pt-20 pb-8 sm:pb-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 sm:mb-16">
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center shadow-soft">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-display font-semibold text-primary">Meta <span class="text-accent">Author</span></span>
                     </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">The complete story creation suite for authors and storytellers.</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-bold text-primary mb-6">Product</h3>
-                    <ul class="space-y-4">
-                        <li><a href="features.html" class="text-gray-600 hover:text-accent transition-colors font-medium">Features</a></li>
-                        <li><a href="pricing.html" class="text-gray-600 hover:text-accent transition-colors font-medium">Pricing</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Templates</a></li>
+                    <h3 class="text-base sm:text-lg font-bold text-primary mb-4 sm:mb-6">Product</h3>
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li><a href="features.html" class="text-gray-600 hover:text-accent transition-colors font-medium text-sm sm:text-base">Features</a></li>
+                        <li><a href="#" class="text-gray-400 cursor-not-allowed font-medium text-sm sm:text-base" title="Coming Soon">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 cursor-not-allowed font-medium text-sm sm:text-base" title="Coming Soon">Templates</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-bold text-primary mb-6">Company</h3>
-                    <ul class="space-y-4">
-                        <li><a href="about.html" class="text-gray-600 hover:text-accent transition-colors font-medium">About</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Blog</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Contact</a></li>
+                    <h3 class="text-base sm:text-lg font-bold text-primary mb-4 sm:mb-6">Resources</h3>
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li><a href="#" class="text-gray-400 cursor-not-allowed font-medium text-sm sm:text-base" title="Coming Soon">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 cursor-not-allowed font-medium text-sm sm:text-base" title="Coming Soon">Writing Guides</a></li>
+                        <li><a href="https://discord.gg/7ubGFdAE" class="text-gray-600 hover:text-accent transition-colors font-medium text-sm sm:text-base">Community</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-bold text-primary mb-6">Resources</h3>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Writer's Guide</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Documentation</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-accent transition-colors font-medium">Community</a></li>
+                    <h3 class="text-base sm:text-lg font-bold text-primary mb-4 sm:mb-6">Legal</h3>
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li><a href="#" class="text-gray-400 cursor-not-allowed font-medium text-sm sm:text-base" title="Coming Soon">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 cursor-not-allowed font-medium text-sm sm:text-base" title="Coming Soon">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 cursor-not-allowed font-medium text-sm sm:text-base" title="Coming Soon">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="pt-8 border-t border-gray-200 text-gray-600">
-                <div class="flex flex-col md:flex-row md:justify-between">
-                    <p>&copy; 2025 PlotPanda. All rights reserved.</p>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="hover:text-accent transition-colors">Terms</a>
-                        <a href="#" class="hover:text-accent transition-colors">Privacy</a>
-                        <a href="#" class="hover:text-accent transition-colors">Cookies</a>
+            <div class="pt-6 sm:pt-8 border-t border-gray-200 text-gray-600">
+                <div class="flex flex-col sm:flex-row sm:justify-between items-center">
+                    <p class="text-sm sm:text-base">&copy; 2025 Meta Author. All rights reserved.</p>
+                    <div class="flex space-x-4 sm:space-x-6 mt-4 sm:mt-0">
+                        <a href="#" class="hover:text-accent transition-colors text-sm sm:text-base" title="Coming Soon">Terms</a>
+                        <a href="#" class="hover:text-accent transition-colors text-sm sm:text-base" title="Coming Soon">Privacy</a>
+                        <a href="#" class="hover:text-accent transition-colors text-sm sm:text-base" title="Coming Soon">Cookies</a>
                     </div>
                 </div>
             </div>
